@@ -1,0 +1,48 @@
+.body {
+    height: 1011px;
+    display: flex;
+    flex-direction: column;
+}
+.banner {
+    position: relative;
+    margin: 37px 150px 0 150px;
+    width: 1180px; 
+    height: 513px;
+    background-image: url('../../../images/fashion.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.text {
+    position: absolute;
+    right: 83px;
+    top: 71px;
+    font-family: Domine;
+    font-size: 48px;
+    font-weight: bold;
+    font-style: normal;
+    color: white;
+    text-align: right;
+}
+.shop {
+    position: absolute;
+    right: 73px;
+    bottom: 47px;
+    width: 180px;
+    height: 49px;
+    background-color: #ffa15f;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+.tags {
+    display: flex;
+}
+.tags .shop {
+    width: 140px;
+    height: 40px;
+    background-color: #ffa15f;
+}
+.container {
+    
+}

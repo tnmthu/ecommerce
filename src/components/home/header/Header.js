@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css';
-import HeaderUpper from './Header-upper.js'
-import HeaderLower from './Header-lower.js'
+import HeaderUpper from './headerUpper/HeaderUpper'
+import HeaderLower from './headerLower/HeaderLower'
 
 class Header extends React.Component {
     constructor(props) {

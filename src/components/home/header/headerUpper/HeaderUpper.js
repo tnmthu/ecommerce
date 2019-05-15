@@ -1,7 +1,7 @@
 import React from 'react';
-import SearchBox from './SearchBox.js';
-import logo from '../images/logo.png';
-import HeaderLeft from './Header-left.js'
+import SearchBox from './SearchBox';
+import logo from '../../../../images/logo.png';
+import HeaderLeft from './HeaderLeft'
 
 class HeaderUpper extends React.Component {
     constructor(props) {
