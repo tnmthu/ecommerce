@@ -6,6 +6,7 @@
 .banner {
     position: relative;
     margin: 37px 150px 0 150px;
+    margin: auto;
     width: 1180px; 
     height: 513px;
     background-image: url('../../../images/fashion.jpg');
@@ -37,12 +38,39 @@
 }
 .tags {
     display: flex;
+    margin: auto;
 }
 .tags .shop {
     width: 140px;
     height: 40px;
     background-color: #ffa15f;
 }
-.container {
-    
+.tags .container {
+    position: relative;
+    background-image: url('../../../images/girls.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 280px;
+    height: 405px;
+    margin-right: 10px;
+    margin-left: 10px; 
+}
+.container .cateName {
+    position: absolute;
+    top: 260px;
+    right: 113px;
+    width: 53px;
+    height: 32px;
+    font-family: Domine;
+    font-size: 24px;
+    color: white;
+}
+.container .line {
+    position: absolute;
+    right: 33px;
+    bottom: 110px;
+    width: 215px;
+    height: 0.1px;
+    border: solid 1px #eaeaea;
 }

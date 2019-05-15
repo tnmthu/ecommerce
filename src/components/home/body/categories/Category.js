@@ -9,7 +9,7 @@ class Category extends React.Component {
     render() { 
         return ( 
             <div className="container">
-                <div className="cate"></div>
+                <div className="cateName">Men</div>
                 <div className="line"></div>
                 <ShopBtn/>
             </div>
