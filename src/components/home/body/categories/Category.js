@@ -8,9 +8,9 @@ class Category extends React.Component {
     }
     render() { 
         return ( 
-            <div className="container">
-                <div className="cateName">Men</div>
-                <div className="line"></div>
+            <div className="body__tags__container">
+                <div className="body__tags__container__cateName">Men</div>
+                <div className="body__tags__container__line"></div>
                 <ShopBtn/>
             </div>
          );

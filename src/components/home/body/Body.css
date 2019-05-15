@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
 }
-.banner {
+.body__banner {
     position: relative;
     margin: 37px 150px 0 150px;
     margin: auto;
@@ -14,7 +14,7 @@
     background-size: cover;
     background-position: center;
 }
-.text {
+.body__banner__text {
     position: absolute;
     right: 83px;
     top: 71px;
@@ -25,7 +25,7 @@
     color: white;
     text-align: right;
 }
-.shop {
+.body__banner__shopBtn {
     position: absolute;
     right: 73px;
     bottom: 47px;
@@ -36,16 +36,11 @@
     font-weight: bold;
     border: none;
 }
-.tags {
+.body__tags {
     display: flex;
     margin: auto;
 }
-.tags .shop {
-    width: 140px;
-    height: 40px;
-    background-color: #ffa15f;
-}
-.tags .container {
+.body__tags__container {
     position: relative;
     background-image: url('../../../images/girls.jpg');
     background-repeat: no-repeat;
@@ -56,9 +51,9 @@
     margin-right: 10px;
     margin-left: 10px; 
 }
-.container .cateName {
+.body__tags__container__cateName {
     position: absolute;
-    top: 260px;
+    bottom: 84px;
     right: 113px;
     width: 53px;
     height: 32px;
@@ -66,11 +61,22 @@
     font-size: 24px;
     color: white;
 }
-.container .line {
+.body__tags__container__line {
     position: absolute;
     right: 33px;
-    bottom: 110px;
+    bottom: 78px;
     width: 215px;
     height: 0.1px;
     border: solid 1px #eaeaea;
+}
+.body__tags__container__shop {
+    position: absolute;
+    right: 70px;
+    bottom: 24px;
+    width: 140px;
+    height: 40px;
+    background-color: #ffa15f;
+    border: none;
+    color: white;
+    font-weight: bold;
 }

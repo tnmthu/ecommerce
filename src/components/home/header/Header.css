@@ -3,7 +3,7 @@
     flex-direction: column;
     border-bottom: 1px solid #dfdfdf;
 }
-.upper {
+.header__upper {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,12 +12,12 @@
     position: relative;
     border-bottom: 1px solid #dfdfdf;
 }
-.logo {
+.header__upper__logo {
     text-align: center;
     position: absolute;
     left: 47%;
 }
-.searchBox {
+.header__upper__searchBox {
     position: relative;
     width: 181px;
     height: 35px;
@@ -25,21 +25,21 @@
     border: solid 1px #acacac;
     margin-left: 129px;
 }
-.searchIcon {
+.header__upper__searchBox__searchIcon {
     position: absolute;
     right: 12px;
     top: 5px;
     bottom: 5px;
     color: #4d4d4d;
 }
-.left-container {
+.header__upper__authen {
     margin-right: 129px;
     width: 300px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
-.Register {
+.header__upper__authen__register {
     width: 59px;
     height: 22px;
     font-family: Montserrat;
@@ -47,7 +47,7 @@
     line-height: 1.57;
     color: #4d4d4d;
 }
-.loginBtn {
+.header__upper__authen__loginBtn {
     width: 120px;
     height: 35px;
     border-radius: 100px;
@@ -56,37 +56,37 @@
     justify-content: center;
     align-items: center;
 }
-.loginBtn p {
+.header__upper__authen__loginBtn p {
     font-weight: bold;
     color: #fd7e36;
 }
-.cart {
+.header__upper__authen__cart {
     position: relative;
 }
-.cartLogo {
+.header__upper__authen__cart__logo {
     color: #4d4d4d;
 }
-.numLogo {
+.header__upper__authen__cart__numLogo {
     position: absolute;
     color: #fd7e36;
     top: -7px;
     right: -5px;
 }
-.lower {
+.header__lower {
     height: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.selection {
+.header__lower__selection {
     display: flex;
 }
-.item {
+.header__lower__selection__item {
     display: flex;
     align-items: center;
     padding: 0 10px 0 10px;
 }
-.item .name {
+.header__lower__selection__item__name {
     padding-right: 4px;
     font-family: Montserrat;
 }

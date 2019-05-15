@@ -1,6 +1,6 @@
 import React from 'react';
 import './Body.css'
-import ShopBtn from '../../ShopBtn';
+import ShopBtn from './ShopBtn';
 import Category from './categories/Category';
 
 class Body extends React.Component {
@@ -11,11 +11,11 @@ class Body extends React.Component {
     render() { 
         return ( 
             <div className="body">
-                <div className="banner">
-                    <div className="text">OUTFIT OF THE WEEK</div>
+                <div className="body__banner">
+                    <div className="body__banner__text">OUTFIT OF THE WEEK</div>
                     <ShopBtn/>
                 </div>
-                <div className="tags">
+                <div className="body__tags">
                     <Category/>
                     <Category/>
                     <Category/>

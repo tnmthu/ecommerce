@@ -7,23 +7,23 @@ class HeaderLower extends React.Component {
     }
     render() { 
         return ( 
-            <div className="lower">
-                <div className="selection">
-                    <div className="item">
-                        <div className="name">Men</div>
-                        <div className="arrow"><i class="fa fa-chevron-down fa-xs"></i></div>
+            <div className="header__lower">
+                <div className="header__lower__selection">
+                    <div className="header__lower__selection__item">
+                        <div className="header__lower__selection__item__name">Men</div>
+                        <div className="header__lower__selection__item__arrow"><i class="fa fa-chevron-down fa-xs"></i></div>
                     </div>
-                    <div className="item">
-                        <div className="name">Ladies</div>
-                        <div className="arrow"><i class="fa fa-chevron-down fa-xs"></i></div>
+                    <div className="header__lower__selection__item">
+                        <div className="header__lower__selection__item__name">Ladies</div>
+                        <div className="header__lower__selection__item__arrow"><i class="fa fa-chevron-down fa-xs"></i></div>
                     </div>
-                    <div className="item">
-                        <div className="name">Girls</div>
-                        <div className="arrow"><i class="fa fa-chevron-down fa-xs"></i></div>
+                    <div className="header__lower__selection__item">
+                        <div className="header__lower__selection__item__name">Boys</div>
+                        <div className="header__lower__selection__item__arrow"><i class="fa fa-chevron-down fa-xs"></i></div>
                     </div>
-                    <div className="item">
-                        <div className="name">Boys</div>
-                        <div className="arrow"><i class="fa fa-chevron-down fa-xs"></i></div>
+                    <div className="header__lower__selection__item">
+                        <div className="header__lower__selection__item__name">Girls</div>
+                        <div className="header__lower__selection__item__arrow"><i class="fa fa-chevron-down fa-xs"></i></div>
                     </div>
                 </div>
             </div>

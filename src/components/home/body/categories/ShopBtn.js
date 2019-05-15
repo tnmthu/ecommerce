@@ -7,7 +7,7 @@ class ShopBtn extends React.Component {
     }
     render() { 
         return ( 
-            <button className="shop">Shop now</button>
+            <button className="body__tags__container__shop">Shop now</button>
          );
     }
 }

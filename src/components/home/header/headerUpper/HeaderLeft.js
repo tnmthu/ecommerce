@@ -7,12 +7,12 @@ class HeaderLeft extends React.Component {
     }
     render() { 
         return ( 
-            <div className="left-container">
-                <div className="Register">Register</div>
-                <div className="loginBtn"><p>Log In</p></div>
-                <div className="cart">
-                    <div className="cartLogo"><i className="fa fa-shopping-cart fa-lg"></i></div>
-                    <div className="numLogo"><i className="fa fa-circle"></i></div>
+            <div className="header__upper__authen">
+                <div className="header__upper__authen__register">Register</div>
+                <div className="header__upper__authen__loginBtn"><p>Log In</p></div>
+                <div className="header__upper__authen__cart">
+                    <div className="header__upper__authen__cart__logo"><i className="fa fa-shopping-cart fa-lg"></i></div>
+                    <div className="header__upper__authen__cart__numLogo"><i className="fa fa-circle"></i></div>
                 </div>
             </div>
          );

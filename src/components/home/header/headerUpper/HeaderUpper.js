@@ -10,9 +10,9 @@ class HeaderUpper extends React.Component {
     }
     render() { 
         return ( 
-            <div className="upper">
+            <div className="header__upper">
                 <SearchBox/>
-                <div className="logo">
+                <div className="header__upper__logo">
                   <img width='96px' height='20px' src={logo}></img>
                 </div>
                 <HeaderLeft/>
