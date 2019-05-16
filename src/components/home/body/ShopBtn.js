@@ -7,7 +7,7 @@ class ShopBtn extends React.Component {
     }
     render() { 
         return ( 
-            <button className="body__banner__shopBtn">Shop now</button>
+            <button className="body__shopBtn" style={{width: this.props.width, height: this.props.height, bottom: this.props.bot}}>Shop now</button>
          );
     }
 }

@@ -2,13 +2,13 @@
     display: flex;
     flex-direction: column;
     height: 185px;
-    position: relative;
 }
 .footer__top {
     height: 121px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid #b7b7b7;
 }
 .footer__menu {
     display: flex;
@@ -18,6 +18,8 @@
 }
 .footer__top__menu {
     display: flex;
+    justify-content: space-between;
+    width: 500px;
 }
 .footer__menu__item {
     font-family: Montserrat;
@@ -25,33 +27,29 @@
     color: #b7b7b7;
     height: 22px;
     text-align: center;
-    padding-right: 20px;
-    padding-left: 20px;
+    /* padding-right: 20px;
+    padding-left: 20px; */
 }
 .footer__top__socmed {
     display: flex;
     justify-content: space-between;
     width: 110px;
 }
-.footer__midLine {
-    width: 1180px;
-    height: 0.8px;
-    background-color: #dfdfdf;
-    position: absolute;
-    right: 170px;
-    bottom: 84px;
-}
 .footer__bot {
     height: 100px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 .footer__bot__left {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 400px;
 }
 .footer__bot__right {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 230px;
 }

@@ -2,12 +2,12 @@
     height: 1011px;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
 }
 .body__banner {
     position: relative;
-    margin: 37px 150px 0 150px;
-    margin: auto;
-    width: 1180px; 
+    /* margin: 37px 150px 0 150px; */
+    /* margin: auto; */
     height: 513px;
     background-image: url('../../../images/fashionn.jpg');
     background-repeat: no-repeat;
@@ -25,7 +25,7 @@
     color: white;
     text-align: right;
 }
-.body__banner__shopBtn {
+.body__shopBtn {
     position: absolute;
     right: 73px;
     bottom: 47px;
@@ -38,7 +38,7 @@
 }
 .body__tags {
     display: flex;
-    margin: auto;
+    justify-content: space-between;
 }
 .body__tags__container {
     position: relative;
@@ -47,8 +47,6 @@
     background-position: center;
     width: 280px;
     height: 405px;
-    margin-right: 10px;
-    margin-left: 10px; 
 }
 .body__tags__container__cateName {
     position: absolute;
@@ -66,16 +64,5 @@
     bottom: 78px;
     width: 215px;
     height: 0.1px;
-    border: solid 1px #eaeaea;
-}
-.body__tags__container__shop {
-    position: absolute;
-    right: 70px;
-    bottom: 24px;
-    width: 140px;
-    height: 40px;
-    background-color: #ffa15f;
-    border: none;
-    color: white;
-    font-weight: bold;
+    border-bottom: solid 1px #eaeaea;
 }
