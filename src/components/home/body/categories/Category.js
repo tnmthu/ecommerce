@@ -8,8 +8,8 @@ class Category extends React.Component {
     }
     render() { 
         return ( 
-            <div className="body__tags__container">
-                <div className="body__tags__container__cateName">Men</div>
+            <div className="body__tags__container" style={{backgroundImage: "url(" + this.props.bgimg + ")"}}>
+                <div className="body__tags__container__cateName">{this.props.item}</div>
                 <div className="body__tags__container__line"></div>
                 <ShopBtn/>
             </div>

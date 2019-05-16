@@ -10,21 +10,23 @@
     justify-content: space-around;
     align-items: center;
 }
-.footer__top__menu {
+.footer__menu {
     display: flex;
 }
 .footer__top__logo{
     width: fit-content;
 }
-.footer__top__menu__item {
+.footer__top__menu {
+    display: flex;
+}
+.footer__menu__item {
     font-family: Montserrat;
     font-size: 14px;
     color: #b7b7b7;
-    width: 66px;
     height: 22px;
     text-align: center;
-    padding-right: 7px;
-    padding-left: 7px;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 .footer__top__socmed {
     display: flex;
@@ -37,5 +39,19 @@
     background-color: #dfdfdf;
     position: absolute;
     right: 170px;
-    bottom: 64px;
+    bottom: 84px;
+}
+.footer__bot {
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer__bot__left {
+    display: flex;
+    align-items: center;
+}
+.footer__bot__right {
+    display: flex;
+    align-items: center;
 }

@@ -2,6 +2,11 @@ import React from 'react';
 import './Body.css'
 import ShopBtn from './ShopBtn';
 import Category from './categories/Category';
+import boys from '../../../images/boys.jpg';
+import men from '../../../images/men.jpg';
+import ladies from '../../../images/ladies.jpg';
+import girls from '../../../images/girls.jpg'
+
 
 class Body extends React.Component {
     constructor(props) {
@@ -16,10 +21,10 @@ class Body extends React.Component {
                     <ShopBtn/>
                 </div>
                 <div className="body__tags">
-                    <Category/>
-                    <Category/>
-                    <Category/>
-                    <Category/>
+                    <Category item="Men" bgimg={men}/>
+                    <Category item="Ladies" bgimg={ladies}/>
+                    <Category item="Girls" bgimg={girls}/>
+                    <Category item="Boys" bgimg={boys}/>
                 </div>
             </div>
          );

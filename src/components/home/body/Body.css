@@ -9,7 +9,7 @@
     margin: auto;
     width: 1180px; 
     height: 513px;
-    background-image: url('../../../images/fashion.jpg');
+    background-image: url('../../../images/fashionn.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -19,7 +19,7 @@
     right: 83px;
     top: 71px;
     font-family: Domine;
-    font-size: 48px;
+    font-size: 50px;
     font-weight: bold;
     font-style: normal;
     color: white;
@@ -42,7 +42,6 @@
 }
 .body__tags__container {
     position: relative;
-    background-image: url('../../../images/girls.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

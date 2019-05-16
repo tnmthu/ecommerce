@@ -7,9 +7,9 @@ class SearchBox extends React.Component {
     }
     render() { 
         return ( 
-            <div className="header__upper__searchBox">
-                <div className="header__upper__searchBox__searchIcon"><i className="fa fa-search fa-lg"></i></div>
-            </div>
+            <input className="header__upper__searchBox" type="text" placeholder="Search">
+                {/* <div className="header__upper__searchBox__searchIcon"><i className="fa fa-search fa-lg"></i></div> */}
+            </input>
          );
     }
 }

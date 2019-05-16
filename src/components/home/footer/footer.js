@@ -13,6 +13,7 @@ class Footer extends Component {
             <div className="footer">
                 <FooterTop/>
                 <div className="footer__midLine"></div>
+                <FooterBot/>
             </div>
          );
     }
