@@ -15,12 +15,12 @@
 .header__upper__logo {
     text-align: center;
     position: absolute;
-    left: 47%;
+    left: 46%;
 }
 .header__upper__searchBox {
     position: relative;
     font-family: Montserrat;
-    width: 181px;
+    width: 200px;
     height: 35px;
     border-radius: 20px;
     border: solid 1px #acacac;
@@ -91,8 +91,32 @@
     display: flex;
     align-items: center;
     padding: 0 10px 0 10px;
+    position: relative;
 }
 .header__lower__selection__item__name {
     padding-right: 4px;
     font-family: Montserrat;
+}
+.header__lower__selection__item__dropdown {
+    display: none;
+    position: absolute;
+    width: 700px;
+}
+.header__lower__selection__item__arrow:hover .header__lower__selection__item__dropdown {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+    height: 60px;
+    background-color: white;
+    z-index: 2;
+    transform: translateX(-50%);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);;
+}
+.header__lower__selection__item__dropdown__type {
+    background-color: transparent;
+    border: none;
+    font-family: Montserrat;
+    font-size: 14px;
+    color: #202124;
 }
