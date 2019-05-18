@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import "./Cart.css";
-import "./Product/Product";
+import Product from "./Content/Product";
+import Color from "./Content/Color";
+import Quantity from "./Content/Quantity";
+import Amount from "./Content/Amount";
 
 class Cart extends Component {
   constructor(props) {
@@ -10,25 +13,20 @@ class Cart extends Component {
   render() {
     return (
       <div className="cart">
+        <div className="cart_myBag">My Bag</div>
         <div className="cart_body">
-          <div className="cart_body_myBag">My Bag</div>
-          <div className="cart_body_content">
-            <div className="cart_body_content_product">
-              <div className="cart_body_content_product_header">
-                <p>Product</p>
-                <p>Color</p>
-                <p>Size</p>
-                <p>Quantity</p>
-                <p>Amount</p>
-              </div>
-              <div className="cart_body_content_product_list" />
-            </div>
-            <div className="cart_body_content_total">
-              <div className="cart_body_content_total_header">
-                <p>Total</p>
-              </div>
-            </div>
-          </div>
+          <p className="cart_body_header border_bot text_align_left">Product</p>
+          <p className="cart_body_header border_bot">Color</p>
+          <p className="cart_body_header border_bot">Size</p>
+          <p className="cart_body_header border_bot">Quantity</p>
+          <p className="cart_body_header border_bot text_align_right">Amount</p>
+          <p className="cart_body_header"> </p>
+          <p className="cart_body_header text_align_left">Total</p>
+          <Product />
+          <Color />
+          <p className="cart_body_size">S</p>
+          <Quantity />
+          <Amount />
         </div>
       </div>
     );
