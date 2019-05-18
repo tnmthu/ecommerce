@@ -1,15 +1,16 @@
 import React from "react";
+import { BrowserRouter } from "react-router-dom";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import "font-awesome/css/font-awesome.min.css";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-ReactDOM.render( <App />,
-//   <BrowserRouter>
-//     <App />
-//   </BrowserRouter>,
+
+ReactDOM.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
   document.getElementById("root")
 );
 

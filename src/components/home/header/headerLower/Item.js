@@ -1,30 +1,48 @@
-import React, { Component } from 'react';
-import DropdownType from './DropdownType'
+import React, { Component } from "react";
+import DropdownType from "./DropdownType";
+import onClickOutside from "react-onclickoutside";
 
 class Item extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {  }
-        this.Men = ["Tops", "Bottoms", "Jackets", "Shoes", "Sales"];
-        this.Ladies = ["Tops", "Bottoms", "Dresses", "Jackets", "Shoes", "Accessories", "Sales"];
-        let type = this.props.type;
-    }
-        render() { 
-        return ( 
-            <div className="header__lower__selection__item">
-                <div className="header__lower__selection__item__name">{this.props.type}</div>
-                <div className="header__lower__selection__item__arrow">
-                    <i class="fa fa-chevron-down fa-xs"></i>
-                    <div className="header__lower__selection__item__dropdown">
-                        {
-                            // this.type.map((item) => <DropdownType type={item} />)
-                        }
-                    </div>
-                </div>
+  constructor(props) {
+    super(props);
+    this.state = { show: false };
+    this.type = this.props.type;
+  }
 
+  toggleShow() {
+    this.setState({
+      show: !this.state.show
+    });
+  }
+
+  handleClickOutside = evt => {
+    this.setState({
+      show: false
+    });
+  };
+
+  render() {
+    return (
+      <div
+        className="header__lower__selection__item"
+        onClick={this.toggleShow.bind(this)}
+      >
+        <div className="header__lower__selection__item__name">
+          {this.props.type}
+        </div>
+        <div className="header__lower__selection__item__arrow">
+          <i class="fa fa-chevron-down fa-xs" />
+          {this.state.show && (
+            <div className="header__lower__selection__item__dropdown">
+              {this.props.items.map(item => (
+                <DropdownType type={item} />
+              ))}
             </div>
-         );
-    }
+          )}
+        </div>
+      </div>
+    );
+  }
 }
- 
-export default Item;
+
+export default onClickOutside(Item);
