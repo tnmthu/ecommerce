@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Side from "../side/Side";
 import Header from "../content/Header/Header";
 import Button from "../content/Button";
+import Input from "../content/Input";
 
 class AccSetting extends Component {
   constructor(props) {
@@ -13,17 +14,14 @@ class AccSetting extends Component {
       <div className="accsetting">
         <Side />
         <div className="accsetting_content">
-          <Header />
+          <Header txt="Information" />
           <div className="accsetting_content_inside">
-            <div className="accsetting_content_inside_header">NAME</div>
-            <div className="accsetting_content_inside_input">
-              <input placeholder="Enter your name" />
-            </div>
-            <div className="accsetting_content_inside_header">E-MAIL</div>
-
-            <div className="accsetting_content_inside_input">
-              <input placeholder="Enter your e-mail" />
-            </div>
+            <Input header="NAME" placeholder="Enter your name" />
+            <Input
+              header="E-MAIL"
+              placeholder="Enter your e-mail"
+              type="email"
+            />
             <div className="accsetting_content_inside_btn">
               <Button txt="Cancel" />
               <Button txt="Save" />

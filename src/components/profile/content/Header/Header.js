@@ -8,8 +8,8 @@ class Header extends Component {
   render() {
     return (
       <div className="profile_content_header">
-        <p id="info">Information</p>
-        <p id="edit">Edit</p>
+        <p id="info">{this.props.txt}</p>
+        {/* <p id="edit">Edit</p> */}
       </div>
     );
   }

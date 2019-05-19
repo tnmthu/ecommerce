@@ -7,6 +7,7 @@ import Cart from "./components/cart/Cart";
 import Ladies from "./components/ladies/Ladies";
 import Profile from "./components/profile/Profile";
 import AccSetting from "./components/profile/accSetting/AccSetting";
+import ChangePw from "./components/profile/changePw/ChangePw";
 
 class Routes extends Component {
   render() {
@@ -19,6 +20,7 @@ class Routes extends Component {
           <Route exact path="/ladies" component={Ladies} />
           <Route exact path="/profile" component={Profile} />
           <Route exact path="/profile/accsetting" component={AccSetting} />
+          <Route exact path="/profile/changepw" component={ChangePw} />
         </Switch>
         <Footer />
       </div>

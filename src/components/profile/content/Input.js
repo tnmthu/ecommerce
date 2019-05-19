@@ -1,0 +1,20 @@
+import React, { Component } from "react";
+
+class Input extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  render() {
+    return (
+      <div className="input">
+        <div className="input_header">{this.props.header}</div>
+        <div className="input_input">
+          <input placeholder={this.props.placeholder} type={this.props.type} />
+        </div>
+      </div>
+    );
+  }
+}
+
+export default Input;
