@@ -30,6 +30,16 @@ class Cart extends Component {
             <p className="cart_body_item_size">S</p>
             <Quantity />
             <Amount />
+            <Product />
+            <Color />
+            <p className="cart_body_item_size">S</p>
+            <Quantity />
+            <Amount />
+            <Product />
+            <Color />
+            <p className="cart_body_item_size">S</p>
+            <Quantity />
+            <Amount />
           </div>
           <div className="cart_body_total">
             <p className="cart_body_total_header">Total</p>

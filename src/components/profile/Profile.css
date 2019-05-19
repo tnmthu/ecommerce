@@ -1,0 +1,134 @@
+.button {
+  width: 120px;
+  height: 30px;
+  margin-top: 30px;
+  margin-left: 20px;
+  font-family: Montserrat;
+  font-weight: bold;
+  color: white;
+  border: none;
+  background-color: #d4d3d3;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #ffbf9b;
+}
+.button:active {
+  background-color: #ffa069;
+}
+.profile {
+  width: 80%;
+  margin: auto;
+  display: flex;
+}
+.profile_side {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+.profile_side_header {
+  padding: 40px 0;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 500;
+  color: #202124;
+}
+.profile_side_choice {
+  display: flex;
+  flex-direction: column;
+}
+.profile_side_choice_btn {
+  border: none;
+  background-color: transparent;
+  text-align: left;
+  font-family: Montserrat;
+  font-size: 14px;
+  padding-bottom: 25px;
+  color: #4d4d4d;
+}
+.profile_side_choice_btn:active {
+  color: #ff6900;
+}
+.profile_content {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0;
+  width: 37%;
+}
+.profile_content_header {
+  display: flex;
+  justify-content: space-between;
+}
+#info {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: bold;
+}
+#edit {
+  font-family: Montserrat;
+  font-size: 14px;
+  color: #4d4d4d;
+}
+.profile_content_inside {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  /* height: 200px; */
+  background-color: #f9f9f9;
+  padding-left: 50px;
+  padding-bottom: 35px;
+}
+.profile_content_inside_header {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: bold;
+  color: #202124;
+  margin-top: 26px;
+}
+.profile_content_inside_content {
+  font-family: Montserrat;
+  font-size: 14px;
+  margin-top: 10px;
+  color: #4d4d4d;
+}
+.accsetting {
+  width: 80%;
+  margin: auto;
+  display: flex;
+}
+.accsetting_content {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0;
+  width: 37%;
+}
+.accsetting_content_inside {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  background-color: #f9f9f9;
+  padding-left: 50px;
+  padding-bottom: 35px;
+}
+.accsetting_content_inside_header {
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: bold;
+  color: #202124;
+  margin-top: 26px;
+}
+.accsetting_content_inside_input input {
+  margin-top: 10px;
+  height: 40px;
+  width: 80%;
+  padding-left: 23px;
+  border: none;
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.1);
+  font-family: Montserrat;
+}
+.accsetting_content_inside_btn {
+  width: 86%;
+  display: flex;
+  justify-content: flex-end;
+}
