@@ -8,7 +8,9 @@ class Input extends Component {
   render() {
     return (
       <div className="input">
-        <div className="input_header">{this.props.header}</div>
+        <div className="input_header" style={{ color: this.props.color }}>
+          {this.props.header}
+        </div>
         <div className="input_input">
           <input placeholder={this.props.placeholder} type={this.props.type} />
         </div>

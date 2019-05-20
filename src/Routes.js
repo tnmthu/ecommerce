@@ -8,19 +8,31 @@ import Ladies from "./components/ladies/Ladies";
 import Profile from "./components/profile/Profile";
 import AccSetting from "./components/profile/accSetting/AccSetting";
 import ChangePw from "./components/profile/changePw/ChangePw";
+import Seller from "./components/seller/Seller";
+import ProductInfo from "./components/productInfo/ProductInfo";
 
 class Routes extends Component {
   render() {
+    if (window.location.pathname == "/seller") {
+      return (
+        <Switch>
+          <Route exact path="/seller" component={Seller} />
+        </Switch>
+      );
+    }
     return (
       <div>
         <Header />
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/cart" component={Cart} />
-          <Route exact path="/ladies" component={Ladies} />
-          <Route exact path="/profile" component={Profile} />
-          <Route exact path="/profile/accsetting" component={AccSetting} />
-          <Route exact path="/profile/changepw" component={ChangePw} />
+          <div style={{ minHeight: "712px" }}>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/cart" component={Cart} />
+            <Route exact path="/ladies" component={Ladies} />
+            <Route exact path="/profile" component={Profile} />
+            <Route exact path="/profile/accsetting" component={AccSetting} />
+            <Route exact path="/profile/changepw" component={ChangePw} />
+            <Route exact path="/productInfo" component={ProductInfo} />
+          </div>
         </Switch>
         <Footer />
       </div>

@@ -26,10 +26,8 @@
   height: 35px;
   border-radius: 20px;
   border: solid 1px #acacac;
+  padding-left: 20px;
   /* background-image: url('../../../images/search.png') no-repeat; */
-}
-.header__upper__searchBox::placeholder {
-  text-indent: 15px;
 }
 /* .header__upper__searchBox__searchIcon {
     position: absolute;

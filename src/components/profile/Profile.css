@@ -106,9 +106,10 @@
   margin-top: 10px;
   display: flex;
   flex-direction: column;
-  height: 200px;
+  /* height: 350px; */
   background-color: #f9f9f9;
   padding-left: 50px;
+  padding-right: 50px;
   padding-bottom: 35px;
 }
 .input_header {
@@ -121,14 +122,14 @@
 .input_input input {
   margin-top: 10px;
   height: 40px;
-  width: 80%;
+  width: 100%;
+  box-sizing: border-box;
   padding-left: 23px;
   border: none;
   box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.1);
   font-family: Montserrat;
 }
 .accsetting_content_inside_btn {
-  width: 86%;
   display: flex;
   justify-content: flex-end;
 }

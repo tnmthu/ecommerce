@@ -1,0 +1,290 @@
+.color {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.size {
+  margin-top: 20px;
+  display: flex;
+}
+.size_selection {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid #808080;
+  font-weight: bold;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.size_selection:hover {
+  background-color: #ffa15f;
+}
+/* .size_selection:visited {
+  background-color: #ff9042;
+} */
+.sectionHeader {
+  font-weight: bold;
+}
+.productInfo {
+  width: 80%;
+  margin: auto;
+  font-family: Montserrat;
+  font-size: 14px;
+}
+.productInfo_location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  font-family: Montserrat;
+}
+/* .productInfo_body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+} */
+.productInfo_main {
+  display: flex;
+  justify-content: space-between;
+  height: 537px;
+}
+.imgs {
+  display: flex;
+  justify-content: space-between;
+  width: 480px;
+}
+.imgs_small {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.imgs_small_img {
+  background-image: url("../../images/clothes.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 116px;
+  width: 80px;
+}
+.imgs_large {
+  background-image: url("../../images/clothes.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 537px;
+  width: 379px;
+}
+.info {
+  width: 460px;
+  margin-right: 90px;
+  position: relative;
+}
+.info_name {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: bold;
+  color: #202124;
+}
+.info_price {
+  font-family: Montserrat;
+  font-size: 24px;
+}
+.info_rate {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+.info_rate_reviewNum {
+  color: #202124;
+  font-family: Montserrat;
+  font-size: 12px;
+}
+.info_size {
+  /* margin: 30px 0; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.info_size_selection {
+}
+.more {
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.info_color {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+  justify-content: space-between;
+}
+.info_color_colors {
+  display: flex;
+}
+.info_quantity {
+  display: flex;
+  align-items: center;
+}
+.info_quantity_header {
+  margin-right: 30px;
+}
+.info_add {
+  margin: 30px 0;
+}
+.info_add_btn {
+  width: 100%;
+  height: 50px;
+  border: none;
+  background-color: #5f6dff;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+.info_add_btn:hover {
+  background-color: #4656ff;
+}
+.info_add_btn:active {
+  background-color: #434fce;
+}
+.info_line {
+  border-bottom: 1px solid #d4d3d3;
+  margin-bottom: 20px;
+}
+.info_model {
+  position: absolute;
+  bottom: 0;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.info_model_header {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: bold;
+}
+.info_model_info {
+  font-family: Montserrat;
+  font-size: 14px;
+}
+.more_header {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  color: #202124;
+  height: 70px;
+}
+.more_brand {
+  font-family: Montserrat;
+  font-size: 14px;
+  color: #4d4d4d;
+  margin-top: 8px;
+  font-weight: normal;
+}
+.more_imgs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 500px;
+}
+.more_imgs_imgs {
+  background-image: url("../../images/clothes.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 105px;
+  width: 70px;
+}
+.reviews_header {
+  position: relative;
+  margin: 40px 0;
+  border-bottom: 1px solid #979797;
+}
+.reviews_header:before {
+  position: absolute;
+  top: -10px;
+  left: 7.4%;
+  padding: 0 10px;
+  z-index: 10000;
+  background-color: white;
+  content: "Reviews";
+}
+.review_content {
+  width: 86%;
+}
+.singleReview {
+  display: flex;
+  /* padding: 20px 0; */
+  margin: 50px 0;
+}
+.user {
+  width: 600px;
+}
+.user_name {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: bold;
+  color: #202124;
+  /* margin-bottom: 5px; */
+}
+.user_time {
+  color: #808080;
+}
+.comment {
+  height: 100%;
+  box-sizing: border-box;
+}
+.comment_title {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: bold;
+  color: #202124;
+  /* margin-bottom: 5px; */
+}
+.comment_rate {
+  margin-bottom: 10px;
+}
+.comment_content {
+  font-family: Montserrat;
+  font-size: 14px;
+  color: #4d4d4d;
+}
+.alsolike {
+  margin-bottom: 30px;
+}
+.alsolike_header {
+  position: relative;
+  margin: 40px 0;
+  border-bottom: 1px solid #979797;
+}
+.alsolike_header:before {
+  position: absolute;
+  top: -10px;
+  left: 7.4%;
+  padding: 0 10px;
+  z-index: 10000;
+  background-color: white;
+  content: "You may also like";
+}
+.alsolike_imgs {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-column-gap: 20px;
+}
+.product {
+  display: flex;
+  flex-direction: column;
+}
+.product_img {
+  background-image: url("../../images/clothes.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 195px;
+  width: 130px;
+}
+.product_title {
+  color: #4d4d4d;
+  font-family: Montserrat;
+  font-size: 12px;
+}
