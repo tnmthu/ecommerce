@@ -1,79 +1,82 @@
 .ladies {
-    margin: auto;
-    width: 80%;
+  margin: auto;
+  width: 80%;
 }
 .ladies__location {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90px;
-    font-family: Montserrat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  font-family: Montserrat;
 }
 .ladies__body {
-    display: flex;
+  display: flex;
 }
 .ladies__body__side {
-    width: 220px;
-    margin: 0;
+  width: 220px;
+  margin: 0;
 }
-.ladies__body__side__cate, .ladies__body__side__filter {
-    font-family: Montserrat;
-    font-size: 16px;
-    font-weight: bold;
+.ladies__body__side__cate,
+.ladies__body__side__filter {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: bold;
 }
-.ladies__body__side__cate__name, .ladies__body__side__filter__name {
-    margin: 15px 0 35px 0;
+.ladies__body__side__cate__name,
+.ladies__body__side__filter__name {
+  margin: 15px 0 35px 0;
 }
-.ladies__body__side__cate__item, .ladies__body__side__filter__item {
-    font-weight: normal;
-    width: 76px;
-    height: 22px;  
-    margin: 25px 0;
+.ladies__body__side__cate__item,
+.ladies__body__side__filter__item {
+  font-weight: normal;
+  width: 76px;
+  height: 22px;
+  margin: 25px 0;
 }
 .ladies__body__side__line {
-    border-bottom: 1px solid #acacac;
-    width: 100px; 
-    margin: 65px 0 65px 0;
+  border-bottom: 1px solid #acacac;
+  width: 100px;
+  margin: 65px 0 65px 0;
 }
 .ladies__body__content {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 .ladies__body__content__header {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
 }
 .ladies__body__content__shop {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-column-gap: 20px;    
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-column-gap: 20px;
 }
 .ladies__body__content__shop__clothesItem__img {
-    background-image: url("../../images/clothes.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 180px;
-    height: 280px;
-    margin-top: 25px
+  background-image: url("../../images/clothes.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 180px;
+  height: 280px;
+  margin-top: 25px;
 }
 .ladies__body__content__shop__clothesItem__descr {
-    font-family: Montserrat;
-    font-size: 14px;
-    font-weight: 500;
-    color: #202124;
-    margin-top: 10px;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  color: #202124;
+  margin-top: 10px;
 }
 .ladies__body__content__shop__clothesItem__descr__price {
-    font-family: Montserrat;
-    font-size: 12px;
-    color: #4d4d4d;
-    font-weight: normal;
-    margin-top: 10px;
+  font-family: Montserrat;
+  font-size: 12px;
+  color: #4d4d4d;
+  font-weight: normal;
+  margin-top: 10px;
 }
 .ladies__body__content__footer {
-    display: flex;
-    justify-content: flex-end;
-    margin: 50px 0;
+  display: flex;
+  justify-content: flex-end;
+  margin: 50px 0;
 }

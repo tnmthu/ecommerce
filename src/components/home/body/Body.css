@@ -1,68 +1,73 @@
 .body {
-    height: 1011px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+  height: 1011px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 .body__banner {
-    position: relative;
-    /* margin: 37px 150px 0 150px; */
-    /* margin: auto; */
-    height: 513px;
-    background-image: url('../../../images/fashionn.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  position: relative;
+  /* margin: 37px 150px 0 150px; */
+  /* margin: auto; */
+  height: 513px;
+  background-image: url("../../../images/fashionn.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .body__banner__text {
-    position: absolute;
-    right: 83px;
-    top: 71px;
-    font-family: Domine;
-    font-size: 50px;
-    font-weight: bold;
-    font-style: normal;
-    color: white;
-    text-align: right;
+  position: absolute;
+  right: 83px;
+  top: 71px;
+  font-family: Domine;
+  font-size: 50px;
+  font-weight: bold;
+  font-style: normal;
+  color: white;
+  text-align: right;
 }
 .body__shopBtn {
-    position: absolute;
-    right: 73px;
-    bottom: 47px;
-    width: 180px;
-    height: 49px;
-    background-color: #ffa15f;
-    color: white;
-    font-weight: bold;
-    border: none;
+  position: absolute;
+  right: 73px;
+  bottom: 47px;
+  width: 180px;
+  height: 49px;
+  background-color: #ffa15f;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.body__shopBtn:hover {
+  background-color: #f79753;
+  transition-duration: 0.4s;
 }
 .body__tags {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 .body__tags__container {
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 280px;
-    height: 405px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 280px;
+  height: 405px;
 }
 .body__tags__container__cateName {
-    position: absolute;
-    bottom: 84px;
-    right: 113px;
-    width: 53px;
-    height: 32px;
-    font-family: Domine;
-    font-size: 24px;
-    color: white;
+  position: absolute;
+  bottom: 84px;
+  right: 113px;
+  width: 53px;
+  height: 32px;
+  font-family: Domine;
+  font-size: 24px;
+  color: white;
 }
 .body__tags__container__line {
-    position: absolute;
-    right: 33px;
-    bottom: 78px;
-    width: 215px;
-    height: 0.1px;
-    border-bottom: solid 1px #eaeaea;
+  position: absolute;
+  right: 33px;
+  bottom: 78px;
+  width: 215px;
+  height: 0.1px;
+  border-bottom: solid 1px #eaeaea;
 }

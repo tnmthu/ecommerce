@@ -30,6 +30,7 @@
   color: #b7b7b7;
   height: 22px;
   text-align: center;
+  cursor: pointer;
   /* padding-right: 20px;
     padding-left: 20px; */
 }
@@ -37,6 +38,9 @@
   display: flex;
   justify-content: space-between;
   width: 110px;
+}
+.footer__top__socmed__item {
+  cursor: pointer;
 }
 .footer__bot {
   height: 100px;

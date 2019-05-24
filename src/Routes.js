@@ -10,6 +10,7 @@ import AccSetting from "./components/profile/accSetting/AccSetting";
 import ChangePw from "./components/profile/changePw/ChangePw";
 import Seller from "./components/seller/Seller";
 import ProductInfo from "./components/productInfo/ProductInfo";
+import Authen from "./components/authen/Authen";
 
 class Routes extends Component {
   render() {
@@ -24,7 +25,7 @@ class Routes extends Component {
       <div>
         <Header />
         <Switch>
-          <div style={{ minHeight: "712px" }}>
+          <div style={{ minHeight: "490px" }}>
             <Route exact path="/" component={Home} />
             <Route exact path="/cart" component={Cart} />
             <Route exact path="/ladies" component={Ladies} />
@@ -35,6 +36,10 @@ class Routes extends Component {
           </div>
         </Switch>
         <Footer />
+
+        {/* <Switch>
+          <Route exact path="/authen" component={Authen} />
+        </Switch> */}
       </div>
     );
   }

@@ -10,7 +10,7 @@ class Content extends Component {
   render() {
     return (
       <div className="profile_content">
-        <Header />
+        <Header txt="Information" />
         <Inside />
       </div>
     );

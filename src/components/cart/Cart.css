@@ -73,6 +73,7 @@
   font-size: 13px;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 .cart_body_product_txt_bot_btn:hover {
   background-color: #fff5f0;
@@ -125,6 +126,7 @@
   font-weight: bold;
   width: 24px;
   height: 24px;
+  cursor: pointer;
 }
 .cart_body_quantity_minus:hover,
 .cart_body_quantity_plus:hover {

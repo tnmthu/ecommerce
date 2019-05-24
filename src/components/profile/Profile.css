@@ -43,8 +43,9 @@
   text-align: left;
   font-family: Montserrat;
   font-size: 14px;
-  padding-bottom: 25px;
+  margin-bottom: 25px;
   color: #4d4d4d;
+  cursor: pointer;
 }
 .profile_side_choice_btn:active {
   color: #ff6900;
@@ -120,6 +121,7 @@
   margin-top: 26px;
 }
 .input_input input {
+  background-color: #f6f6f6;
   margin-top: 10px;
   height: 40px;
   width: 100%;

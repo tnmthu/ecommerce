@@ -11,7 +11,9 @@ class SingleReview extends Component {
     return (
       <div className="singleReview">
         <User />
-        <Comment />
+        <div className="singleReview_cmt">
+          <Comment />
+        </div>
       </div>
     );
   }

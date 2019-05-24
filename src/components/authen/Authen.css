@@ -1,0 +1,38 @@
+.authen {
+  width: 300px;
+  margin: auto;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  padding: 50px;
+  vertical-align: middle;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 350px;
+}
+.login_header {
+  font-family: Montserrat;
+  font-size: 32px;
+  font-weight: bold;
+  color: 202124;
+  text-align: center;
+}
+.login_inside_btn {
+  margin-top: 30px;
+  border: none;
+  background-color: #d4d3d3;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  height: 40px;
+  width: 100%;
+}
+.login_inside_btn:hover {
+  background-color: #fcae77;
+  transition-duration: 0.15s;
+}
+.login_inside_btn:active {
+  background-color: #f79e5e;
+}

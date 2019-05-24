@@ -141,6 +141,7 @@
   font-size: 16px;
   font-weight: bold;
   color: white;
+  cursor: pointer;
 }
 .info_add_btn:hover {
   background-color: #4656ff;
@@ -216,10 +217,16 @@
 .singleReview {
   display: flex;
   /* padding: 20px 0; */
-  margin: 50px 0;
+  margin: 30px 0;
+}
+.singleReview_cmt {
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 20px 20px;
 }
 .user {
   width: 600px;
+  padding: 20px 0;
 }
 .user_name {
   font-family: Montserrat;

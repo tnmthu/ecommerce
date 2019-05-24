@@ -31,7 +31,6 @@ class Item extends Component {
           {this.props.type}
         </div>
         <div className="header__lower__selection__item__arrow">
-          <i class="fa fa-chevron-down fa-xs" />
           {this.state.show && (
             <div className="header__lower__selection__item__dropdown">
               {this.props.items.map(item => (

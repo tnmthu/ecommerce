@@ -2,6 +2,7 @@ import React from "react";
 import SearchBox from "./SearchBox";
 import logo from "../../../../images/logo.png";
 import HeaderLeft from "./HeaderLeft";
+import { Link, Route, Switch } from "react-router-dom";
 
 class HeaderUpper extends React.Component {
   constructor(props) {
@@ -12,9 +13,11 @@ class HeaderUpper extends React.Component {
     return (
       <div className="header__upper">
         <SearchBox />
-        <div className="header__upper__logo">
-          <img width="96px" height="20px" src={logo} alt="aware logo" />
-        </div>
+        <Link to="/">
+          <div className="header__upper__logo">
+            <img width="96px" height="20px" src={logo} alt="aware logo" />
+          </div>
+        </Link>
         <HeaderLeft />
       </div>
     );
