@@ -1,5 +1,6 @@
 import React from "react";
 import Item from "./Item";
+import { Link } from "react-router-dom";
 
 class HeaderLower extends React.Component {
   constructor(props) {
@@ -25,7 +26,9 @@ class HeaderLower extends React.Component {
               "Accessories",
               "Sales"
             ]}
-          />
+          >
+            <Link to="/ladies/dresses" />
+          </Item>
           <Item
             type="Girls"
             items={[

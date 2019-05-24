@@ -28,7 +28,7 @@ class Routes extends Component {
           <div style={{ minHeight: "490px" }}>
             <Route exact path="/" component={Home} />
             <Route exact path="/cart" component={Cart} />
-            <Route exact path="/ladies" component={Ladies} />
+            <Route exact path="/ladies/dresses" component={Ladies} />
             <Route exact path="/profile" component={Profile} />
             <Route exact path="/profile/accsetting" component={AccSetting} />
             <Route exact path="/profile/changepw" component={ChangePw} />
