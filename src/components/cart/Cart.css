@@ -127,6 +127,7 @@
   width: 24px;
   height: 24px;
   cursor: pointer;
+  vertical-align: middle;
 }
 .cart_body_quantity_minus:hover,
 .cart_body_quantity_plus:hover {
@@ -172,6 +173,7 @@
   font-weight: bold;
 }
 .cart_body_total_checkoutBtn {
+  margin-top: 30px;
   height: 55px;
   font-family: Montserrat;
   font-size: 16px;

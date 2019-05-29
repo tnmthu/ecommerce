@@ -4,7 +4,7 @@ class Quantity extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      quantity: 0
+      quantity: 1
     };
   }
 
@@ -22,7 +22,7 @@ class Quantity extends Component {
         <button
           type="button"
           className="cart_body_quantity_minus"
-          disabled={this.state.quantity === 0}
+          disabled={this.state.quantity === 1}
           onClick={this.decrementQuantity.bind(this)}
         >
           -

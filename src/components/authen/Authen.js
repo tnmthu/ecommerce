@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Login from "./login/Login";
+// import Login from "./login/LoginModal";
 import "./Authen.css";
 
 class Authen extends Component {
@@ -8,11 +8,7 @@ class Authen extends Component {
     this.state = {};
   }
   render() {
-    return (
-      <div className="authen">
-        <Login />
-      </div>
-    );
+    return <div className="authen">{/* <Login /> */}</div>;
   }
 }
 

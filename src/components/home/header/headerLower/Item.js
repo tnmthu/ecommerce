@@ -34,7 +34,7 @@ class Item extends Component {
           {this.state.show && (
             <div className="header__lower__selection__item__dropdown">
               {this.props.items.map(item => (
-                <DropdownType type={item} />
+                <DropdownType type={this.props.type} item={item} />
               ))}
             </div>
           )}

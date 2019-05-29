@@ -11,12 +11,23 @@
   right: 0;
   height: 350px;
 }
+.login {
+  padding: 40px;
+}
 .login_header {
   font-family: Montserrat;
   font-size: 32px;
   font-weight: bold;
   color: 202124;
   text-align: center;
+}
+.login_inside_mid {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-family: Montserrat;
+  font-size: 14px;
 }
 .login_inside_btn {
   margin-top: 30px;
@@ -35,4 +46,51 @@
 }
 .login_inside_btn:active {
   background-color: #f79e5e;
+}
+.login_inside_bot {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+.register {
+  padding: 40px;
+}
+.register_header {
+  font-family: Montserrat;
+  font-size: 32px;
+  font-weight: bold;
+  color: 202124;
+  text-align: center;
+}
+.register_inside_mid {
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+}
+.register_inside_mid_content {
+  width: 80%;
+  text-align: center;
+}
+.register_inside_btn {
+  /* margin-top: 30px; */
+  border: none;
+  background-color: #d4d3d3;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  height: 40px;
+  width: 100%;
+}
+.register_inside_btn:hover {
+  background-color: #fcae77;
+  transition-duration: 0.15s;
+}
+.register_inside_btn:active {
+  background-color: #f79e5e;
+}
+.register_inside_bot {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
 }

@@ -9,6 +9,13 @@
   /* margin: 37px 150px 0 150px; */
   /* margin: auto; */
   height: 513px;
+  /* background-image: url("../../../images/fashionn.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; */
+}
+.body__banner_img {
+  height: 100%;
   background-image: url("../../../images/fashionn.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -41,6 +48,15 @@
   background-color: #f79753;
   transition-duration: 0.4s;
 }
+/* .body__banner_img .body__shopBtn:hover {
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+  transition-duration: 0.5s;
+  background-image: url("../../../images/boys.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+} */
 .body__tags {
   display: flex;
   justify-content: space-between;

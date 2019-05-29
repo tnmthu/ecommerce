@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class DropdownItem extends Component {
   constructor(props) {
@@ -7,12 +8,17 @@ class DropdownItem extends Component {
   }
   render() {
     return (
-      <button
-        className="header__lower__selection__item__dropdown__type"
-        type="button"
+      <Link
+        className="header__lower__selection__item__dropdown__type link-no-decor"
+        to={
+          "/" +
+          this.props.type.toLowerCase() +
+          "/" +
+          this.props.item.toLowerCase()
+        }
       >
-        {this.props.type}
-      </button>
+        {this.props.item}
+      </Link>
     );
   }
 }

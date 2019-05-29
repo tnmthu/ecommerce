@@ -8,9 +8,8 @@ import Ladies from "./components/ladies/Ladies";
 import Profile from "./components/profile/Profile";
 import AccSetting from "./components/profile/accSetting/AccSetting";
 import ChangePw from "./components/profile/changePw/ChangePw";
-import Seller from "./components/seller/Seller";
 import ProductInfo from "./components/productInfo/ProductInfo";
-import Authen from "./components/authen/Authen";
+import Seller from "./components/seller/Seller";
 
 class Routes extends Component {
   render() {
@@ -39,6 +38,7 @@ class Routes extends Component {
 
         {/* <Switch>
           <Route exact path="/authen" component={Authen} />
+          <Route exact path="/seller" component={Seller} />
         </Switch> */}
       </div>
     );

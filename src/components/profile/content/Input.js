@@ -12,7 +12,11 @@ class Input extends Component {
           {this.props.header}
         </div>
         <div className="input_input">
-          <input placeholder={this.props.placeholder} type={this.props.type} />
+          <input
+            placeholder={this.props.placeholder}
+            type={this.props.type}
+            onChange={this.props.onChange}
+          />
         </div>
       </div>
     );

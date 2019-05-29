@@ -17,6 +17,7 @@ class Body extends React.Component {
       <div className="body">
         <div className="body__container">
           <div className="body__banner">
+            <div className="body__banner_img" />
             <div className="body__banner__text">OUTFIT OF THE WEEK</div>
             <ShopBtn />
           </div>

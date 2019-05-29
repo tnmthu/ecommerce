@@ -1,0 +1,17 @@
+/* .out_modal {
+  position: relative;
+} */
+/* .modal {
+  position: absolute;
+  bottom: -10px;
+} */
+.viewcart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffa15f;
+}

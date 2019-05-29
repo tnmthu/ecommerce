@@ -13,11 +13,13 @@ class HeaderUpper extends React.Component {
     return (
       <div className="header__upper">
         <SearchBox />
-        <Link to="/">
-          <div className="header__upper__logo">
+
+        <div className="header__upper__logo">
+          <Link to="/">
             <img width="96px" height="20px" src={logo} alt="aware logo" />
-          </div>
-        </Link>
+          </Link>
+        </div>
+
         <HeaderLeft />
       </div>
     );
