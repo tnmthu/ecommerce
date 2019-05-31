@@ -11,8 +11,8 @@ class Main extends Component {
   render() {
     return (
       <div className="productInfo_main">
-        <Images />
-        <Info />
+        <Images data={this.props.data.images} />
+        <Info data={this.props.data} />
         <MoreFrom />
       </div>
     );

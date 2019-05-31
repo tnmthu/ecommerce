@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Modal } from "reactstrap";
 import Body from "./body/Body";
 import "./Home.css";
 

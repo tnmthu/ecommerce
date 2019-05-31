@@ -1,11 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import RegisterModal from "../../../authen/register/RegisterModal";
 import LoginModal from "../../../authen/login/LoginModal";
 import cart from "../../../../images/cart.png";
 import ava from "../../../../images/ladies.jpg";
 import onClickOutside from "react-onclickoutside";
 import Minicart from "../../header/headerUpper/minicart/Minicart";
+import UserDropdown from "../headerUpper/userDropdown/UserDropdown";
 import { UserContext } from "../../../../context/UserProvider";
 
 class HeaderLeft extends React.Component {
@@ -58,7 +58,18 @@ class HeaderLeft extends React.Component {
       <div className="header__upper__authen">
         <UserContext.Consumer>
           {state => {
-            return !state.isLogin ? (
+            return state.isLogin ? (
+              <div className="userinfo">
+                <img
+                  className="userinfo_ava"
+                  src={ava}
+                  alt="avatar"
+                  onClick={this.toggleShowAccInfo}
+                />
+                <div className="userinfo_name">{state.userName}</div>
+                {showAccInfo && <UserDropdown />}
+              </div>
+            ) : (
               <div>
                 <button
                   className="header__upper__authen__register"
@@ -74,33 +85,6 @@ class HeaderLeft extends React.Component {
                 >
                   Log In
                 </button>
-              </div>
-            ) : (
-              <div className="userinfo">
-                <img
-                  className="userinfo_ava"
-                  src={ava}
-                  alt="avatar"
-                  onClick={this.toggleShowAccInfo}
-                />
-                <div className="userinfo_name">{state.userName}</div>
-                {showAccInfo && (
-                  <div className="user_drop">
-                    <Link
-                      to="/profile"
-                      className="user_drop_accset item link-no-decor"
-                    >
-                      Account setting
-                    </Link>
-
-                    <div
-                      className="user_drop_logout item link-no-decor"
-                      // onClick={!state.isLogin}
-                    >
-                      Log out
-                    </div>
-                  </div>
-                )}
               </div>
             );
           }}

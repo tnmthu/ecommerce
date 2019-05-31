@@ -7,46 +7,83 @@ import Quantity from "../../../cart/Content/Quantity";
 class Info extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      size: "S",
+      color: "",
+      quantity: 1
+    };
+    this.handleChangeSize = this.handleChangeSize.bind(this);
+    this.handleChangeColor = this.handleChangeColor.bind(this);
+    this.changeQuantity = this.changeQuantity.bind(this);
   }
+
+  changeQuantity(amount) {
+    this.setState({ quantity: this.state.quantity + amount });
+  }
+
+  handleChangeSize(size) {
+    this.setState({ size: size });
+  }
+
+  handleChangeColor(color) {
+    this.setState({ color: color });
+  }
+
   render() {
     return (
       <div className="info">
-        <div className="info_name">Collete Stretch Linen Minidress</div>
-        <div className="info_price">$69.00</div>
+        <div className="info_name">{this.props.data.name}</div>
+        <div className="info_price">{`$ ${this.props.data.price}`}</div>
         <div className="info_rate">
           <div className="info_rate_star">
             <StarRatings
-              rating={3.7}
+              rating={this.props.data.rating}
               starRatedColor={"rgb(255, 223, 95)"}
               starDimension={"15px"}
               starSpacing={"1px"}
             />
           </div>
-          <div className="info_rate_reviewNum">| 0 reviews</div>
+          <div className="info_rate_reviewNum">
+            | {this.props.data.reviews && this.props.data.reviews.length}{" "}
+            reviews
+          </div>
         </div>
         <div className="info_size">
           <div className="info_size_header">Size</div>
           <div className="info_size_selection">
-            <SizeSelection />
+            <SizeSelection
+              available={this.props.data.available}
+              size={this.state.size}
+              handleChangeSize={this.handleChangeSize}
+            />
           </div>
         </div>
         <div className="info_color">
           <div className="info_color_header">Color</div>
           <div className="info_color_colors">
-            <Color color="#ff5f6d" />
-            <Color color="#ff5f6d" />
-            <Color color="#ff5f6d" />
+            <div
+              className="color"
+              style={{ backgroundColor: "#aaa" }}
+              onClick={() => this.handleChangeColor("#aaa")}
+            />
+            <div
+              className="color"
+              style={{ backgroundColor: "#ff5f6d" }}
+              onClick={() => this.handleChangeColor("#ff5f6d")}
+            />
           </div>
         </div>
         <div className="info_quantity">
           <div className="info_quantity_header">Quantity</div>
           <div className="info_quantity_box">
-            <Quantity />
+            <Quantity
+              quantity={this.state.quantity}
+              changeQuantity={this.changeQuantity}
+            />
           </div>
         </div>
         <div className="info_add">
-          <button type="button" className="info_add_btn">
+          <button type="submit" className="info_add_btn">
             Add to cart
           </button>
         </div>

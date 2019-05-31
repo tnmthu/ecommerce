@@ -2,13 +2,19 @@ import React, { Component } from "react";
 import Side from "../side/Side";
 import Header from "../content/Header/Header";
 import Input from "../content/Input";
-import Button from "../content/Button";
 
 class ChangePw extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      password: ""
+    };
   }
+
+  onChange = type => e => {
+    this.setState({ [type]: e.target.value });
+  };
+
   render() {
     return (
       <div className="changePw">
@@ -30,9 +36,13 @@ class ChangePw extends Component {
               header="RE-ENTER NEW PASSWORD"
               placeholder="Enter your password"
               type="password"
+              value={this.state.password}
+              onChange={this.onChange("password")}
             />
             <div className="changePw_content_inside_btn">
-              <Button txt="Save" />
+              <button type="submit" className="button">
+                Save
+              </button>
             </div>
           </div>
         </div>

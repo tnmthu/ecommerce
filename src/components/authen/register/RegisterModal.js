@@ -82,7 +82,7 @@ class RegisterModal extends Component {
               </div>
               <button
                 className="register_inside_btn"
-                type="button"
+                type="submit"
                 onClick={event => this.handleClick(event)}
               >
                 Register

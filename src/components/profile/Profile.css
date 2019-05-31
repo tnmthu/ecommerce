@@ -81,7 +81,7 @@
 }
 .profile_content_inside_header {
   font-family: Montserrat;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
   color: #202124;
   margin-top: 26px;
@@ -109,9 +109,7 @@
   flex-direction: column;
   /* height: 350px; */
   background-color: #f9f9f9;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-bottom: 35px;
+  padding: 0 50px 30px 50px;
 }
 .input_header {
   font-family: Montserrat;
@@ -121,7 +119,7 @@
   margin-top: 26px;
 }
 .input_input input {
-  background-color: #f6f6f6;
+  background-color: white;
   margin-top: 10px;
   height: 40px;
   width: 100%;
@@ -152,11 +150,10 @@
   flex-direction: column;
   /* height: 200px; */
   background-color: #f9f9f9;
-  padding-left: 50px;
-  padding-bottom: 35px;
+  padding: 0 50px 30px 50px;
 }
 .changePw_content_inside_btn {
-  width: 86%;
+  width: 100%;
   display: flex;
   justify-content: flex-end;
 }

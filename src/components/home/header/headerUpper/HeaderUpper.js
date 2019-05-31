@@ -2,7 +2,7 @@ import React from "react";
 import SearchBox from "./SearchBox";
 import logo from "../../../../images/logo.png";
 import HeaderLeft from "./HeaderLeft";
-import { Link, Route, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class HeaderUpper extends React.Component {
   constructor(props) {

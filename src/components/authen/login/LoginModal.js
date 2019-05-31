@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Input from "../../profile/content/Input";
 import { Modal } from "reactstrap";
+// import { Redirect } from "react-router";
 import "../Authen.css";
 import { UserContext } from "../../../context/UserProvider";
 const axios = require("axios");
@@ -11,6 +12,7 @@ class LoginModal extends Component {
     this.state = {
       email: "",
       password: ""
+      // redirectToHome: false
     };
   }
   onChange = type => e => {
@@ -22,20 +24,22 @@ class LoginModal extends Component {
       email: this.state.email,
       password: this.state.password
     };
-    console.log(payload);
     axios({
       method: "post",
       url: apiUrl + "login",
       data: payload
     }).then(response => {
-      console.log(response);
-      console.log(response.status);
+      localStorage.setItem("user_token", response.data.token);
+      // localStorage.setItem("user_id", response.data.userId);
+      // this.setState({ redirectToHome: true });
       dispatchUser(response.data.token);
     });
   }
 
   render() {
     const { isOpen, toggle, className } = this.props;
+    // const { redirectToHome } = this.state;
+    // if (redirectToHome) return <Redirect to="/" />;
     return (
       <div className="modal">
         <Modal

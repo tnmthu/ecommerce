@@ -11,8 +11,10 @@
   right: 0;
   height: 350px;
 }
-.login {
+.login,
+.register {
   padding: 40px;
+  background-color: #f3f3f3;
 }
 .login_header {
   font-family: Montserrat;
@@ -52,9 +54,7 @@
   display: flex;
   justify-content: center;
 }
-.register {
-  padding: 40px;
-}
+
 .register_header {
   font-family: Montserrat;
   font-size: 32px;
@@ -78,16 +78,18 @@
   font-family: Montserrat;
   font-size: 16px;
   font-weight: bold;
-  color: white;
+  color: #555;
   height: 40px;
   width: 100%;
 }
 .register_inside_btn:hover {
   background-color: #fcae77;
   transition-duration: 0.15s;
+  color: white;
 }
 .register_inside_btn:active {
   background-color: #f79e5e;
+  color: white;
 }
 .register_inside_bot {
   margin-top: 40px;

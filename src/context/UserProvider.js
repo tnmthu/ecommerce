@@ -1,4 +1,5 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 const jwt = require("jsonwebtoken");
 
 export const UserContext = React.createContext();
@@ -9,16 +10,22 @@ class UserProvider extends React.Component {
     this.state = {
       isLogin: false,
       userName: "",
+      userId: "",
+      userEmail: "",
       dispatchUser: token => {
         var decoded = jwt.decode(token);
         console.log(decoded);
         this.setState({
           isLogin: true,
-          userName: decoded.firstName
+          userName: decoded.firstName + " " + decoded.lastName,
+          userId: decoded.userId,
+          userEmail: decoded.email
         });
       },
       logoutUser: () => {
         this.setState({ isLogin: false });
+        localStorage.clear();
+        this.props.history.push("/");
       }
     };
   }
@@ -31,4 +38,4 @@ class UserProvider extends React.Component {
   }
 }
 
-export default UserProvider;
+export default withRouter(UserProvider);

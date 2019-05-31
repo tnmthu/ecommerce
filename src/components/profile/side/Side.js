@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class Side extends Component {
   constructor(props) {
@@ -8,10 +9,22 @@ class Side extends Component {
   render() {
     return (
       <div className="profile_side">
-        <div className="profile_side_header">My account</div>
+        <Link to="/profile" className="profile_side_header link-no-decor">
+          My account
+        </Link>
         <div className="profile_side_choice">
-          <div className="profile_side_choice_btn">Account setting</div>
-          <div className="profile_side_choice_btn">Change password</div>
+          <Link
+            to="/profile/accsetting"
+            className="profile_side_choice_btn link-no-decor"
+          >
+            Account setting
+          </Link>
+          <Link
+            to="/profile/changepw"
+            className="profile_side_choice_btn link-no-decor"
+          >
+            Change password
+          </Link>
         </div>
       </div>
     );

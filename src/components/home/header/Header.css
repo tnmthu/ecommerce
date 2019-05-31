@@ -35,6 +35,7 @@
   align-items: center;
 }
 .header__upper__authen__register {
+  margin-right: 30px;
   width: 100px;
   height: 35px;
   border-radius: 100px;
@@ -42,13 +43,14 @@
   font-size: 14px;
   line-height: 1.57;
   color: #4d4d4d;
-  border: none;
+  border: 1px solid #dfdfdf;
   background-color: transparent;
   cursor: pointer;
   text-align: center;
 }
 .header__upper__authen__register:hover {
   background-color: #dfdfdf;
+  /* color: white; */
   transition-duration: 0.45s;
 }
 .header__upper__authen__loginBtn {
@@ -70,7 +72,7 @@
 .header__upper__authen .cart {
   width: 30px;
   height: 30px;
-  margin-left: 15px;
+  margin-left: 30px;
   position: relative;
 }
 .header__upper__authen .cart_oval {

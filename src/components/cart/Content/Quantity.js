@@ -3,9 +3,6 @@ import React, { Component } from "react";
 class Quantity extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      quantity: 1
-    };
   }
 
   incrementQuantity() {
@@ -22,16 +19,16 @@ class Quantity extends Component {
         <button
           type="button"
           className="cart_body_quantity_minus"
-          disabled={this.state.quantity === 1}
-          onClick={this.decrementQuantity.bind(this)}
+          disabled={this.props.quantity === 1}
+          onClick={() => this.props.changeQuantity(-1)}
         >
           -
         </button>
-        <div className="cart_body_quantity_num">{this.state.quantity}</div>
+        <div className="cart_body_quantity_num">{this.props.quantity}</div>
         <button
           type="button"
           className="cart_body_quantity_plus"
-          onClick={this.incrementQuantity.bind(this)}
+          onClick={() => this.props.changeQuantity(1)}
         >
           +
         </button>
