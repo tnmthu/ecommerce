@@ -44,7 +44,8 @@ class HeaderLeft extends React.Component {
 
   handleClickOutside = evt => {
     this.setState({
-      showMinicart: false
+      showMinicart: false,
+      showAccInfo: false
     });
   };
 

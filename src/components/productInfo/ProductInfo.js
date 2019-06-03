@@ -29,11 +29,10 @@ class ProductInfo extends Component {
       <div className="productInfo">
         <div className="productInfo_location">
           {`${data.gender} / ${data.category} / ${data.name}`}
-          {/* Ladies / Dresses / Collete Stretch Linen Minidress */}
         </div>
         <Main data={data} />
         <Reviews data={data.reviews} />
-        {/* <AlsoLike /> */}
+        <AlsoLike />
       </div>
     );
   }

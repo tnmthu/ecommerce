@@ -43,7 +43,7 @@ class RegisterModal extends Component {
           isOpen={isOpen}
           toggle={toggle}
           className={className}
-          centered="true"
+          centered={true}
         >
           <div className="register">
             <div className="register_header">Register</div>

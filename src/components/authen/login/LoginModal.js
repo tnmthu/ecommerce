@@ -46,7 +46,7 @@ class LoginModal extends Component {
           isOpen={isOpen}
           toggle={toggle}
           className={className}
-          centered="true"
+          centered={true}
         >
           <div className="login">
             <div className="login_header">Log In</div>

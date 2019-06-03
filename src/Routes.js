@@ -65,7 +65,7 @@ class Routes extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/cart" component={Cart} />
-            <Route path="/product/:_id" component={ProductInfo} />
+
             <AuthRoute exact path="/profile" component={Profile} />
             <AuthRoute
               exact
@@ -73,6 +73,7 @@ class Routes extends Component {
               component={AccSetting}
             />
             <AuthRoute exact path="/profile/changepw" component={ChangePw} />
+            <Route path="/product/:_id" component={ProductInfo} />
             <Route path="/:gender/:category" component={Ladies} />
           </Switch>
         </div>

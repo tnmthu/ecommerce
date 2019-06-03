@@ -9,15 +9,19 @@
   color: #202124;
   padding: 40px 0;
 }
-.cart_body {
+.cart_container {
   display: flex;
-  justify-content: space-between;
+}
+.cart_body_left {
+  margin-right: 80px;
+  display: flex;
+  flex-direction: column;
 }
 .cart_body_items {
   width: 800px;
+  height: fit-content;
   display: grid;
   grid-template-columns: 1.8fr 1fr 1fr 1.5fr 0.8fr;
-  grid-template-rows: 35px 130px;
 }
 .cart_body_items_header {
   font-weight: bold;
@@ -40,67 +44,6 @@
   display: flex;
   align-items: center;
   height: 130px;
-}
-.cart_body_product_img {
-  /* align-self: center; */
-  width: 110px;
-  height: 110px;
-  padding-right: 10px;
-  background-image: url("../../images/item.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.cart_body_product_txt {
-  /* align-self: center; */
-  height: 110px;
-  margin-left: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.cart_body_product_txt_top {
-  font-family: Montserrat;
-  font-size: 17px;
-  color: #202124;
-}
-.cart_body_product_txt_bot {
-  height: 25px;
-  display: flex;
-}
-.cart_body_product_txt_bot_btn {
-  font-family: Montserrat;
-  font-size: 13px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-.cart_body_product_txt_bot_btn:hover {
-  background-color: #fff5f0;
-  border-radius: 20%;
-}
-.cart_body_product_txt_bot_dash {
-  padding: 0 10px;
-  margin: 0;
-  font-family: Montserrat;
-  font-size: 13px;
-}
-.cart_body_color {
-  width: 30px;
-  height: 30px;
-  background-color: #a4624c;
-  text-align: center;
-  vertical-align: middle;
-  border: none;
-  border-radius: 50%;
-  align-self: center;
-  justify-self: center;
-}
-.cart_body_item_size {
-  font-family: Montserrat;
-  font-size: 18px;
-  align-self: center;
-  justify-self: center;
 }
 .cart_body_quantity {
   align-self: center;
@@ -136,12 +79,6 @@
 .cart_body_quantity_minus:active,
 .cart_body_quantity_plus:active {
   background-color: #e0e0e0;
-}
-.cart_body_amount {
-  align-self: center;
-  justify-self: right;
-  font-family: Montserrat;
-  font-size: 19px;
 }
 .cart_body_total {
   width: 350px;

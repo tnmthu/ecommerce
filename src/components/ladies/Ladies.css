@@ -29,9 +29,13 @@
 .ladies__body__side__cate__item,
 .ladies__body__side__filter__item {
   font-weight: normal;
-  width: 76px;
+  /* width: 76px; */
   height: 22px;
   margin: 25px 0;
+  cursor: pointer;
+}
+.ladies__body__side__cate__item:hover {
+  color: #ff6900;
 }
 .ladies__body__side__line {
   border-bottom: 1px solid #acacac;

@@ -12,9 +12,10 @@ class UserProvider extends React.Component {
       userName: "",
       userId: "",
       userEmail: "",
+      hasToken: false,
       dispatchUser: token => {
-        var decoded = jwt.decode(token);
-        console.log(decoded);
+        const decoded = jwt.decode(token);
+        // console.log(decoded);
         this.setState({
           isLogin: true,
           userName: decoded.firstName + " " + decoded.lastName,
@@ -29,6 +30,18 @@ class UserProvider extends React.Component {
       }
     };
   }
+
+  componentDidMount() {
+    if (localStorage.getItem("user_token") !== null) {
+      const decoded = jwt.decode(localStorage.getItem("user_token"));
+      this.setState({
+        isLogin: true,
+        userName: decoded.firstName + " " + decoded.lastName,
+        userEmail: decoded.email
+      });
+    }
+  }
+
   render() {
     return (
       <UserContext.Provider value={this.state}>

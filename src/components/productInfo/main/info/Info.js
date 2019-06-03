@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import StarRatings from "react-star-ratings";
 import SizeSelection from "../../utilities/SizeSelection";
-import Color from "../../utilities/Color";
 import Quantity from "../../../cart/Content/Quantity";
+import axios from "axios";
+import jwt from "jsonwebtoken";
 
 class Info extends Component {
   constructor(props) {
@@ -27,6 +28,27 @@ class Info extends Component {
 
   handleChangeColor(color) {
     this.setState({ color: color });
+  }
+
+  handleClick(event) {
+    if (localStorage.getItem("user_token") !== null) {
+      const apiUrl = "http://localhost:3005/cart";
+      const payload = {
+        size: this.state.size,
+        color: this.state.color,
+        quantity: this.state.quantity,
+        name: this.props.data.name,
+        userId: jwt.decode(localStorage.getItem("user_token")).userId,
+        item: this.props.data._id
+      };
+      axios({
+        method: "post",
+        url: apiUrl,
+        data: payload
+      }).then(response => {
+        localStorage.setItem("user_cart", response.data.cart);
+      });
+    }
   }
 
   render() {
@@ -83,7 +105,11 @@ class Info extends Component {
           </div>
         </div>
         <div className="info_add">
-          <button type="submit" className="info_add_btn">
+          <button
+            type="submit"
+            className="info_add_btn"
+            onClick={event => this.handleClick(event)}
+          >
             Add to cart
           </button>
         </div>

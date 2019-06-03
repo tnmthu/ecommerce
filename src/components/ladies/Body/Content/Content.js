@@ -19,7 +19,7 @@ class Content extends Component {
               return <ClothesItem item={item} key={index} />;
             })}
         </div>
-        <div className="ladies__body__content__footer">1/100</div>
+        {/* <div className="ladies__body__content__footer">1/100</div> */}
       </div>
     );
   }

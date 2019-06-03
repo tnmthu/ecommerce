@@ -15,7 +15,7 @@ class ClothesItem extends Component {
           <div className="ladies__body__content__shop__clothesItem__descr">
             {name}
             <div className="ladies__body__content__shop__clothesItem__descr__price">
-              {price}
+              ${price}
             </div>
           </div>
         </Link>
