@@ -12,12 +12,12 @@ class MinicartItem extends Component {
         <div className="item_container">
           <div className="item_img" />
           <div className="item_info">
-            <div className="item_info_top">
-              New Balance Men's Street Backpack
-            </div>
+            <div className="item_info_top">{this.props.name}</div>
             <div className="item_info_bot">
-              <div className="item_info_bot_left">$485</div>
-              <div className="item_info_bot_right">S-Black-1 pcs</div>
+              <div className="item_info_bot_left">${this.props.price}</div>
+              <div className="item_info_bot_right">
+                {this.props.size}-{this.props.color}-{this.props.quantity} pcs
+              </div>
             </div>
           </div>
         </div>

@@ -64,8 +64,7 @@ class Routes extends Component {
         <div style={{ minHeight: "490px" }}>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/cart" component={Cart} />
-
+            <AuthRoute exact path="/cart" component={Cart} />
             <AuthRoute exact path="/profile" component={Profile} />
             <AuthRoute
               exact

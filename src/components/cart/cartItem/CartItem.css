@@ -52,7 +52,7 @@
 .cart_item_color {
   width: 30px;
   height: 30px;
-  background-color: #a4624c;
+  /* background-color: #a4624c; */
   text-align: center;
   vertical-align: middle;
   border: none;
@@ -65,6 +65,7 @@
   font-size: 18px;
   align-self: center;
   justify-self: center;
+  margin: none;
 }
 .cart_item_amount {
   align-self: center;

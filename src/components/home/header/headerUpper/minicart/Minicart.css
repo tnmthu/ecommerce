@@ -1,17 +1,25 @@
-/* .out_modal {
-  position: relative;
-} */
-/* .modal {
-  position: absolute;
-  bottom: -10px;
-} */
 .viewcart {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 60px;
+  width: 300px;
   font-family: Montserrat;
   font-size: 14px;
   font-weight: bold;
   color: #ffa15f;
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.2);
+}
+.with-translate {
+  transform: translateX(-90%);
+}
+.out {
+  /* position: relative; */
+  /* max-height: 353px; */
+  width: 300px;
+  right: 280px;
+  bottom: -80px;
 }

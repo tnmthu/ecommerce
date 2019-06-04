@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Cart.css";
 import CartItem from "./cartItem/CartItem";
+import { UserContext } from "../../context/UserProvider";
 
 class Cart extends Component {
   constructor(props) {
@@ -30,11 +31,25 @@ class Cart extends Component {
                 Amount
               </p>
             </div>
-            <CartItem />
-            <CartItem />
-            <CartItem />
-            <CartItem />
-            <CartItem />
+            <UserContext.Consumer>
+              {state => {
+                return state.cartQuantity > 0 ? (
+                  <div>
+                    {state.cart.cartItem.map((item, index) => (
+                      <CartItem
+                        name={item.name}
+                        color={item.color}
+                        quantity={item.quantity}
+                        price={item.price}
+                        size={item.size}
+                      />
+                    ))}
+                  </div>
+                ) : (
+                  <h5>Empty cart!</h5>
+                );
+              }}
+            </UserContext.Consumer>
           </div>
           <div className="cart_body_total">
             <p className="cart_body_total_header">Total</p>

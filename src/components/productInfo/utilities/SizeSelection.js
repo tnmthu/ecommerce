@@ -14,8 +14,8 @@ class SizeSelection extends Component {
       <div className="size">
         {this.props.available &&
           this.props.available.size &&
-          this.array.map((item, key) => {
-            console.log(this.props.available);
+          this.array.map(item => {
+            // console.log(this.props.available);
             if (this.props.available.size[item]) {
               if (item === this.props.size) {
                 return (

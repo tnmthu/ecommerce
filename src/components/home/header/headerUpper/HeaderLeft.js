@@ -60,18 +60,32 @@ class HeaderLeft extends React.Component {
         <UserContext.Consumer>
           {state => {
             return state.isLogin ? (
-              <div className="userinfo">
-                <img
-                  className="userinfo_ava"
-                  src={ava}
-                  alt="avatar"
-                  onClick={this.toggleShowAccInfo}
-                />
-                <div className="userinfo_name">{state.userName}</div>
-                {showAccInfo && <UserDropdown />}
+              <div className="header__upper__authen">
+                <div className="userinfo">
+                  <img
+                    className="userinfo_ava"
+                    src={ava}
+                    alt="avatar"
+                    onClick={this.toggleShowAccInfo}
+                  />
+                  <div className="userinfo_name">{state.userName}</div>
+                  {showAccInfo && <UserDropdown />}
+                </div>
+                <div className="cart" onClick={this.toggleShowMinicart}>
+                  <img className="cart_icon" src={cart} alt="cart icon" />
+                  <div className="cart_oval">
+                    <div className="cart_oval_num">{state.cartQuantity}</div>
+                  </div>
+                  {showMinicart && (
+                    <Minicart
+                      cart={state.cart}
+                      cartQuantity={state.cartQuantity}
+                    />
+                  )}
+                </div>
               </div>
             ) : (
-              <div>
+              <div className="header__upper__authen">
                 <button
                   className="header__upper__authen__register"
                   type="button"
@@ -86,17 +100,22 @@ class HeaderLeft extends React.Component {
                 >
                   Log In
                 </button>
+                <div className="cart" onClick={this.toggleShowMinicart}>
+                  <img className="cart_icon" src={cart} alt="cart icon" />
+                  <div className="cart_oval">
+                    <div className="cart_oval_num">0</div>
+                  </div>
+                  {showMinicart && (
+                    <Minicart
+                      cart={state.cart}
+                      cartQuantity={state.cartQuantity}
+                    />
+                  )}
+                </div>
               </div>
             );
           }}
         </UserContext.Consumer>
-        <div className="cart" onClick={this.toggleShowMinicart}>
-          <img className="cart_icon" src={cart} alt="cart icon" />
-          <div className="cart_oval">
-            <div className="cart_oval_num">1</div>
-          </div>
-          {showMinicart && <Minicart />}
-        </div>
 
         <RegisterModal isOpen={showRegModal} toggle={this.toggleRegModal} />
         <LoginModal isOpen={showLoginModal} toggle={this.toggleLoginModal} />

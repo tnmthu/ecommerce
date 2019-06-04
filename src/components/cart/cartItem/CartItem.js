@@ -6,7 +6,7 @@ import Quantity from "../Content/Quantity";
 class CartItem extends Component {
   constructor(props) {
     super(props);
-    this.state = { quantity: 1 };
+    this.state = { quantity: this.props.quantity };
     this.changeQuantity = this.changeQuantity.bind(this);
   }
 
@@ -20,9 +20,7 @@ class CartItem extends Component {
         <div className="cart_item_product">
           <img className="cart_item_product_image" src={img} alt="product" />
           <div className="cart_item_product_txt">
-            <div className="cart_item_product_txt_top">
-              Collete Stretch Linen Minidress
-            </div>
+            <div className="cart_item_product_txt_top">{this.props.name}</div>
             <div className="cart_item_product_txt_bot">
               <button type="button" className="cart_item_product_txt_bot_btn">
                 Change
@@ -34,13 +32,19 @@ class CartItem extends Component {
             </div>
           </div>
         </div>
-        <button type="button" className="cart_item_color" />
-        <p className="cart_item_size">S</p>
+        <button
+          type="button"
+          className="cart_item_color"
+          sytle={{ backgroundColor: this.props.color }}
+        />
+        <p className="cart_item_size">{this.props.size}</p>
         <Quantity
           quantity={this.state.quantity}
           changeQuantity={this.changeQuantity}
         />
-        <div className="cart_item_amount">$69.69</div>
+        <div className="cart_item_amount">
+          ${this.props.price * this.state.quantity}
+        </div>
       </div>
     );
   }

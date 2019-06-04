@@ -4,6 +4,7 @@ import SizeSelection from "../../utilities/SizeSelection";
 import Quantity from "../../../cart/Content/Quantity";
 import axios from "axios";
 import jwt from "jsonwebtoken";
+import { UserContext } from "../../../../context/UserProvider";
 
 class Info extends Component {
   constructor(props) {
@@ -30,7 +31,7 @@ class Info extends Component {
     this.setState({ color: color });
   }
 
-  handleClick(event) {
+  handleClick(event, dispatchCart) {
     if (localStorage.getItem("user_token") !== null) {
       const apiUrl = "http://localhost:3005/cart";
       const payload = {
@@ -46,8 +47,15 @@ class Info extends Component {
         url: apiUrl,
         data: payload
       }).then(response => {
-        localStorage.setItem("user_cart", response.data.cart);
+        // console.log("here", response.data.cart);
+        localStorage.setItem(
+          payload.userId,
+          JSON.stringify(response.data.cart)
+        );
+        dispatchCart(payload.userId);
       });
+    } else {
+      alert("Please log in first!");
     }
   }
 
@@ -105,13 +113,17 @@ class Info extends Component {
           </div>
         </div>
         <div className="info_add">
-          <button
-            type="submit"
-            className="info_add_btn"
-            onClick={event => this.handleClick(event)}
-          >
-            Add to cart
-          </button>
+          <UserContext.Consumer>
+            {state => (
+              <button
+                type="submit"
+                className="info_add_btn"
+                onClick={event => this.handleClick(event, state.dispatchCart)}
+              >
+                Add to cart
+              </button>
+            )}
+          </UserContext.Consumer>
         </div>
         <div className="info_line" />
         <div className="info_model">
