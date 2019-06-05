@@ -40,7 +40,8 @@ class Info extends Component {
         quantity: this.state.quantity,
         name: this.props.data.name,
         userId: jwt.decode(localStorage.getItem("user_token")).userId,
-        item: this.props.data._id
+        item: this.props.data._id,
+        price: this.props.data.price
       };
       axios({
         method: "post",

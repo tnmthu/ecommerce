@@ -23,8 +23,6 @@ const checkAuth = () => {
     if (exp < new Date().getTime() / 1000) {
       return false;
     }
-    console.log(exp);
-    console.log(new Date().getTime() / 1000);
   } catch (e) {
     return false;
   }

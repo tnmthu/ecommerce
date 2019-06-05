@@ -42,7 +42,7 @@ class UserProvider extends React.Component {
             });
           }
         }
-        // console.log("state", this.state);
+        console.log("state", this.state);
       },
       logoutUser: () => {
         this.setState({
@@ -65,7 +65,6 @@ class UserProvider extends React.Component {
   }
 
   componentDidMount() {
-    console.log(this.state.cartQuantity);
     if (localStorage.getItem("user_token") !== null) {
       const decoded = jwt.decode(localStorage.getItem("user_token"));
       // console.log("decoded", decoded);
@@ -95,6 +94,7 @@ class UserProvider extends React.Component {
         }
       }
     }
+    console.log(this.state.cart);
     // if (this.state.cart.cartItem.length !== 0) {
     //   console.log("here");
     // const cartToken = JSON.parse(localStorage.getItem("user_cart"));

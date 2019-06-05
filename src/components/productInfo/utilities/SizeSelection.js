@@ -14,12 +14,13 @@ class SizeSelection extends Component {
       <div className="size">
         {this.props.available &&
           this.props.available.size &&
-          this.array.map(item => {
+          this.array.map((item, index) => {
             // console.log(this.props.available);
             if (this.props.available.size[item]) {
               if (item === this.props.size) {
                 return (
                   <button
+                    key={index}
                     type="button"
                     className="size_selection size_btn_visited"
                     onClick={() => this.props.handleChangeSize(item)}
