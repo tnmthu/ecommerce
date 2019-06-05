@@ -3,6 +3,7 @@ import "./Cart.css";
 import CartItem from "./cartItem/CartItem";
 import { UserContext } from "../../context/UserProvider";
 import jwt from "jsonwebtoken";
+import axios from "axios";
 
 class Cart extends Component {
   constructor(props) {
@@ -76,6 +77,22 @@ class Cart extends Component {
     );
   }
 
+  handleClick(event) {
+    const apiUrl = "http://localhost:3005/order/";
+    const payload = {
+      userMail: jwt.decode(localStorage.getItem("user_token")).email,
+      totalPrice: this.state.totalprice
+    };
+    axios({
+      method: "post",
+      url: apiUrl,
+      data: payload
+    }).then(response => {
+      alert("Your order have been placed!");
+      console.log(response);
+    });
+  }
+
   render() {
     return (
       <div className="cart">
@@ -130,7 +147,11 @@ class Cart extends Component {
                 <p>${this.state.totalprice}</p>
               </div>
             </div>
-            <button type="button" className="cart_body_total_checkoutBtn">
+            <button
+              type="button"
+              className="cart_body_total_checkoutBtn"
+              onClick={event => this.handleClick(event)}
+            >
               Checkout
             </button>
           </div>

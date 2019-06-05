@@ -11,12 +11,24 @@ class CartItem extends Component {
   }
 
   changeQuantity(amount) {
-    console.log(amount);
     const { item, changeItemQuantity } = this.props;
 
     this.setState({ quantity: this.state.quantity + amount }, () => {
       changeItemQuantity(this.state.quantity, item._id);
     });
+  }
+
+  handleClick(event) {
+    // const apiUrl = "http://localhost:3005/cart/";
+    // const payload = {
+    //   email: this.state.email,
+    //   password: this.state.password
+    // };
+    // axios({
+    //   method: "post",
+    //   url: apiUrl + "removeItem",
+    //   data: payload
+    // }).then(response => {});
   }
 
   render() {
@@ -32,7 +44,11 @@ class CartItem extends Component {
                 Change
               </button>
               <div className="cart_item_product_txt_bot_dash">|</div>
-              <button type="button" className="cart_item_product_txt_bot_btn">
+              <button
+                type="button"
+                className="cart_item_product_txt_bot_btn"
+                onClick={event => this.handleClick(event)}
+              >
                 Remove
               </button>
             </div>

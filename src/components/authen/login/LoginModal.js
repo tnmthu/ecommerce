@@ -30,17 +30,7 @@ class LoginModal extends Component {
       data: payload
     }).then(response => {
       localStorage.setItem("user_token", response.data.token);
-      // if (localStorage.getItem("user_cart") !== null) {
-      //   const cartToken = JSON.parse(localStorage.getItem("user_cart"));
-      //   this.setState({
-      //     cart: cartToken,
-      //     cartQuantity: cartToken.cartItem.length
-      //   });
-      // }
-      // localStorage.setItem("user_id", response.data.userId);
-      // this.setState({ redirectToHome: true });
       dispatchUser(response.data.token);
-      // console.log("cart", localStorage.getItem("user_cart"));
     });
   }
 
