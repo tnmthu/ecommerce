@@ -31,9 +31,10 @@ class Info extends Component {
     this.setState({ color: color });
   }
 
-  handleClick(event, dispatchCart) {
+  handleClick(event, addToCart) {
+    // console.log("@@");
+
     if (localStorage.getItem("user_token") !== null) {
-      const apiUrl = "http://localhost:3005/cart";
       const payload = {
         size: this.state.size,
         color: this.state.color,
@@ -43,18 +44,7 @@ class Info extends Component {
         item: this.props.data._id,
         price: this.props.data.price
       };
-      axios({
-        method: "post",
-        url: apiUrl,
-        data: payload
-      }).then(response => {
-        // console.log("here", response.data.cart);
-        localStorage.setItem(
-          payload.userId,
-          JSON.stringify(response.data.cart)
-        );
-        dispatchCart(payload.userId, false);
-      });
+      addToCart(payload);
     } else {
       alert("Please log in first!");
     }
@@ -119,7 +109,7 @@ class Info extends Component {
               <button
                 type="submit"
                 className="info_add_btn"
-                onClick={event => this.handleClick(event, state.dispatchCart)}
+                onClick={event => this.handleClick(event, state.addToCart)}
               >
                 Add to cart
               </button>

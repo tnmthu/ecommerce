@@ -10,7 +10,6 @@ class Minicart extends Component {
     this.state = {};
   }
   render() {
-    console.log("Minicart", this.props.cart);
     return (
       <div className="out">
         <UserContext.Consumer>

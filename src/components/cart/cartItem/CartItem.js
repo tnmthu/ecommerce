@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import img from "../../../images/item.jpg";
+import img from "../../../images/clothes.png";
 import "./CartItem.css";
 import Quantity from "../Content/Quantity";
+import UserProvider, { UserContext } from "../../../context/UserProvider";
 
 class CartItem extends Component {
   constructor(props) {
@@ -13,12 +14,15 @@ class CartItem extends Component {
   changeQuantity(amount) {
     const { item, changeItemQuantity } = this.props;
 
-    this.setState({ quantity: this.state.quantity + amount }, () => {
-      changeItemQuantity(this.state.quantity, item._id);
-    });
+    this.setState(
+      { quantity: this.state.quantity + amount }
+      //   , () => {
+      //    changeItemQuantity(this.state.quantity, item._id);
+      // }
+    );
   }
 
-  handleClick(event) {
+  handleClick(event, deleteItemFromCart) {
     // const apiUrl = "http://localhost:3005/cart/";
     // const payload = {
     //   email: this.state.email,
@@ -29,6 +33,7 @@ class CartItem extends Component {
     //   url: apiUrl + "removeItem",
     //   data: payload
     // }).then(response => {});
+    deleteItemFromCart(this.props.keyCartItem);
   }
 
   render() {
@@ -44,13 +49,21 @@ class CartItem extends Component {
                 Change
               </button>
               <div className="cart_item_product_txt_bot_dash">|</div>
-              <button
-                type="button"
-                className="cart_item_product_txt_bot_btn"
-                onClick={event => this.handleClick(event)}
-              >
-                Remove
-              </button>
+              <UserContext.Consumer>
+                {({ deleteItemFromCart }) => {
+                  return (
+                    <button
+                      type="button"
+                      className="cart_item_product_txt_bot_btn"
+                      onClick={event =>
+                        this.handleClick(event, deleteItemFromCart)
+                      }
+                    >
+                      Remove
+                    </button>
+                  );
+                }}
+              </UserContext.Consumer>
             </div>
           </div>
         </div>
@@ -62,10 +75,17 @@ class CartItem extends Component {
         <Quantity
           quantity={this.state.quantity}
           changeQuantity={this.changeQuantity}
+          keyCartItem={this.props.keyCartItem}
         />
-        <div className="cart_item_amount">
-          ${item.price * this.state.quantity}
-        </div>
+        <UserContext.Consumer>
+          {({ cart }) => (
+            <div className="cart_item_amount">
+              $
+              {cart[this.props.keyCartItem].quantity *
+                cart[this.props.keyCartItem].price}
+            </div>
+          )}
+        </UserContext.Consumer>
       </div>
     );
   }
