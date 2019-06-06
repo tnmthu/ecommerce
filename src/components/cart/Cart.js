@@ -11,7 +11,8 @@ class Cart extends Component {
     this.state = {
       quantity: 1,
       totalprice: 0,
-      cart: {}
+      cart: [],
+      didCheckout: false
     };
     this.changeQuantity = this.changeQuantity.bind(this);
     this.getTotal = this.getTotal.bind(this);
@@ -25,37 +26,34 @@ class Cart extends Component {
   componentDidMount() {
     if (localStorage.getItem("user_token") !== null) {
       const userId = jwt.decode(localStorage.getItem("user_token")).userId;
-      for (let i = 0; i < localStorage.length; i++) {
-        if (userId === localStorage.key(i)) {
-          const user_cart = JSON.parse(
-            localStorage.getItem(localStorage.key(i))
-          );
-          let totalPrice = this.getTotal(user_cart.cartItem);
-          console.log(user_cart, totalPrice);
-          this.setState(
-            {
-              cart: user_cart,
-              totalprice: totalPrice
-            },
-            () => {
-              console.log(this.state);
-            }
-          );
-        }
+      const user_cart = JSON.parse(localStorage.getItem(userId));
+      if (user_cart !== null) {
+        // console.log(user_cart.cartItem);
+        let totalPrice = this.getTotal(user_cart.cartItem);
+        this.setState(
+          {
+            cart: user_cart.cartItem,
+            totalprice: totalPrice
+          },
+          () => {
+            // console.log("here", Array.isArray(this.state.cart));
+          }
+        );
       }
     }
   }
 
   getTotal(cart) {
+    // console.log(cart);
     return cart.reduce((x, y) => {
+      // console.log(x, y);
       return x + y.price * y.quantity;
     }, 0);
   }
 
   changeItemQuantity(quantity, itemId) {
-    // console.log(quantity);
-    const cartArr = this.state.cart.cartItem.map(item => {
-      // console.log(itemId, item._id);
+    // console.log(this.state.cart);
+    const cartArr = this.state.cart.map(item => {
       if (item._id === itemId) {
         return {
           ...item,
@@ -64,20 +62,20 @@ class Cart extends Component {
       }
       return item;
     });
-    // console.log(cartArr);
     const total = this.getTotal(cartArr);
+    // console.log("cartArr", cartArr);
     this.setState(
       {
         totalprice: total,
-        "cart.cartItem": cartArr
+        cart: cartArr
       },
       () => {
-        // console.log(this.state);
+        // console.log("cart state", this.state);
       }
     );
   }
 
-  handleClick(event) {
+  handleClick(event, dispatchCart) {
     const apiUrl = "http://localhost:3005/order/";
     const payload = {
       userMail: jwt.decode(localStorage.getItem("user_token")).email,
@@ -89,11 +87,21 @@ class Cart extends Component {
       data: payload
     }).then(response => {
       alert("Your order have been placed!");
-      console.log(response);
+      this.setState({ didCheckout: true });
+      // console.log(response);
+      const userId = jwt.decode(localStorage.getItem("user_token")).userId;
+      // console.log("userId", userId);
+      // for (let i = 0; i < localStorage.length; i++) {
+      //   if (userId === localStorage.key(i)) {
+      //     localStorage.removeItem(localStorage.key(i));
+      //   }
+      // }
+      dispatchCart(userId, this.state.didCheckout);
     });
   }
 
   render() {
+    // console.log(this.state.cart);
     return (
       <div className="cart">
         <div className="cart_myBag">My Bag</div>
@@ -110,51 +118,92 @@ class Cart extends Component {
                 Amount
               </p>
             </div>
-            <UserContext.Consumer>
-              {state => {
-                return state.cartQuantity > 0 ? (
-                  <div>
-                    {state.cart.cartItem.map((item, index) => (
-                      <CartItem
-                        item={item}
-                        key={index}
-                        changeItemQuantity={this.changeItemQuantity}
-                      />
-                    ))}
+            {!this.state.didCheckout &&
+            // this.state.cart &&
+            this.state.cart.length > 0 ? (
+              this.state.cart.map((item, index) => (
+                <CartItem
+                  item={item}
+                  key={index}
+                  changeItemQuantity={this.changeItemQuantity}
+                />
+              ))
+            ) : (
+              <p>Empty cart! Go shopping! </p>
+            )}
+          </div>
+          {!this.state.didCheckout ? (
+            <div className="cart_body_total">
+              <p className="cart_body_total_header">Total</p>
+              <div className="cart_body_total_info">
+                <div className="cart_body_total_info_top">
+                  <div className="cart_body_total_info_top_right">
+                    <p>{"Shipping & Handling"}</p>
+                    <p>Total product</p>
                   </div>
-                ) : (
-                  <h5>Empty cart!</h5>
-                );
-              }}
-            </UserContext.Consumer>
-          </div>
-          <div className="cart_body_total">
-            <p className="cart_body_total_header">Total</p>
-            <div className="cart_body_total_info">
-              <div className="cart_body_total_info_top">
-                <div className="cart_body_total_info_top_right">
-                  <p>{"Shipping & Handling"}</p>
-                  <p>Total product</p>
+                  <div className="cart_body_total_info_top_left">
+                    <p>Free</p>
+                    <p>${this.state.totalprice}</p>
+                  </div>
                 </div>
-                <div className="cart_body_total_info_top_left">
-                  <p>Free</p>
-                  <p>${this.state.totalprice}</p>
+                <div className="border_bot" />
+                <div className="cart_body_total_info_bot">
+                  <div>Subtotal</div>
+                  <div>${this.state.totalprice}</div>
                 </div>
               </div>
-              <div className="border_bot" />
-              <div className="cart_body_total_info_bot">
-                <p>Subtotal</p>
-                <p>${this.state.totalprice}</p>
-              </div>
+              <UserContext.Consumer>
+                {state => {
+                  return (
+                    <button
+                      type="button"
+                      className="cart_body_total_checkoutBtn"
+                      onClick={event =>
+                        this.handleClick(event, state.dispatchCart)
+                      }
+                    >
+                      Checkout
+                    </button>
+                  );
+                }}
+              </UserContext.Consumer>
             </div>
-            <button
-              type="button"
-              className="cart_body_total_checkoutBtn"
-              onClick={event => this.handleClick(event)}
-            >
-              Checkout
-            </button>
-          </div>
+          ) : (
+            <div className="cart_body_total">
+              <p className="cart_body_total_header">Total</p>
+              <div className="cart_body_total_info">
+                <div className="cart_body_total_info_top">
+                  <div className="cart_body_total_info_top_right">
+                    <p>{"Shipping & Handling"}</p>
+                    <p>Total product</p>
+                  </div>
+                  <div className="cart_body_total_info_top_left">
+                    <p>Free</p>
+                    <p>$0</p>
+                  </div>
+                </div>
+                <div className="border_bot" />
+                <div className="cart_body_total_info_bot">
+                  <p>Subtotal</p>
+                  <p>$0</p>
+                </div>
+              </div>
+              <UserContext.Consumer>
+                {state => (
+                  <button
+                    type="button"
+                    className="cart_body_total_checkoutBtn"
+                    onClick={event =>
+                      this.handleClick(event, state.dispatchCart)
+                    }
+                    disabled
+                  >
+                    Checkout
+                  </button>
+                )}
+              </UserContext.Consumer>
+            </div>
+          )}
         </div>
       </div>
     );

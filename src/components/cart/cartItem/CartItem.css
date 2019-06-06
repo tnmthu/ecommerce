@@ -59,6 +59,7 @@
   border-radius: 50%;
   align-self: center;
   justify-self: center;
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 .cart_item_size {
   font-family: Montserrat;

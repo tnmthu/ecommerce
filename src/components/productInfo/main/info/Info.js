@@ -53,7 +53,7 @@ class Info extends Component {
           payload.userId,
           JSON.stringify(response.data.cart)
         );
-        dispatchCart(payload.userId);
+        dispatchCart(payload.userId, false);
       });
     } else {
       alert("Please log in first!");

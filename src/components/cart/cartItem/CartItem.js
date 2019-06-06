@@ -54,10 +54,9 @@ class CartItem extends Component {
             </div>
           </div>
         </div>
-        <button
-          type="button"
+        <div
           className="cart_item_color"
-          sytle={{ backgroundColor: item.color }}
+          style={{ backgroundColor: item.color }}
         />
         <p className="cart_item_size">{item.size}</p>
         <Quantity

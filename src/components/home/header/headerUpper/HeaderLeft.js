@@ -59,6 +59,7 @@ class HeaderLeft extends React.Component {
       <div className="header__upper__authen">
         <UserContext.Consumer>
           {state => {
+            // console.log("hereeee", state);
             return state.isLogin ? (
               <div className="header__upper__authen">
                 <div className="userinfo">

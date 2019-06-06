@@ -10,13 +10,14 @@ class Minicart extends Component {
     this.state = {};
   }
   render() {
+    console.log("Minicart", this.props.cart);
     return (
       <div className="out">
         <UserContext.Consumer>
           {state =>
             this.props.cartQuantity > 0 ? (
               <div className="minicart">
-                {this.props.cart.cartItem.map((item, index) => (
+                {this.props.cart.map((item, index) => (
                   <MinicartItem
                     key={index}
                     name={item.name}

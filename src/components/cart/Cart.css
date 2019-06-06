@@ -94,9 +94,11 @@
   text-align: left;
 }
 .cart_body_total_info {
-  height: 130px;
+  /* height: 130px; */
   background-color: #f9f9f9;
   padding: 25px;
+  display: flex;
+  flex-direction: column;
 }
 .cart_body_total_info_top {
   display: flex;
@@ -108,6 +110,7 @@
   justify-content: space-between;
   font-family: Montserrat;
   font-weight: bold;
+  margin-top: 10px;
 }
 .cart_body_total_checkoutBtn {
   margin-top: 30px;

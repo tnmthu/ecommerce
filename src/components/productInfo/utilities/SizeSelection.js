@@ -31,6 +31,7 @@ class SizeSelection extends Component {
               } else {
                 return (
                   <button
+                    key={index}
                     type="button"
                     className="size_selection"
                     onClick={() => this.props.handleChangeSize(item)}
@@ -42,10 +43,11 @@ class SizeSelection extends Component {
             } else {
               return (
                 <button
+                  key={index}
                   type="button"
                   className="size_selection"
                   onClick={() => this.props.handleChangeSize(item)}
-                  disabled="true"
+                  disabled={true}
                 >
                   {item}
                 </button>
