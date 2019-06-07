@@ -180,6 +180,7 @@ class UserProvider extends React.Component {
             return newState;
           },
           () => {
+            console.log(this.state.cart);
             axios({
               method: "patch",
               url: `http://localhost:3005/user/${userId}`,
@@ -238,10 +239,11 @@ class UserProvider extends React.Component {
               //       });
               //       break;
               //     } else {
+              console.log("asdf", response.data);
               this.setState({
-                cart: response.data.cart.cartItem,
-                cartQuantity: response.data.cart.cartItem.length,
-                total: getTotal(response.data.cart.cartItem)
+                cart: response.data.user.cart.cartItem,
+                cartQuantity: response.data.user.cart.cartItem.length,
+                total: getTotal(response.data.user.cart.cartItem)
               });
               //     }
               //   }

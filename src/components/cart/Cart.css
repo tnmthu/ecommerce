@@ -63,14 +63,21 @@
 .cart_body_quantity_plus {
   background-color: transparent;
   border: none;
-  border-radius: 50%;
+  /* border-radius: %; */
   font-family: Montserat;
   font-size: 20px;
   font-weight: bold;
   width: 24px;
   height: 24px;
   cursor: pointer;
+  /* outline: none;
+  width: 50%; */
   vertical-align: middle;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 .cart_body_quantity_minus:hover,
 .cart_body_quantity_plus:hover {
